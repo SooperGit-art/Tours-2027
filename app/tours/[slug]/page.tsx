@@ -11,6 +11,22 @@ import RelatedTours from '@/components/RelatedTours'
 
 const BASE_URL = 'https://2027.tours'
 
+const homepageAnchors = [
+  '2027 tour tracker',
+  'list of 2027 concerts',
+  '2027 concert tour calendar',
+  '2027 tours and concerts',
+  'full list of 2027 tours'
+]
+
+function homepageAnchorText(slug: string): string {
+  let hash = 0
+  for (let i = 0; i < slug.length; i++) {
+    hash = (hash * 31 + slug.charCodeAt(i)) % homepageAnchors.length
+  }
+  return homepageAnchors[hash]
+}
+
 export async function generateStaticParams() {
   return getAllTourSlugs().map((slug) => ({ slug }))
 }
@@ -290,6 +306,13 @@ export default function TourPage({ params }: { params: { slug: string } }) {
       )}
 
       <div className="mt-10 pt-8 border-t border-black/10">
+        <p className="text-sm text-muted mb-5">
+          Looking for other artists? Browse the full{' '}
+          <Link href="/" className="text-accent hover:underline font-medium">
+            {homepageAnchorText(params.slug)}
+          </Link>{' '}
+          for every confirmed and rumored show we're tracking.
+        </p>
         <h2 className="font-display text-2xl font-bold mb-5">Other 2027 tours we're tracking</h2>
         <RelatedTours currentSlug={params.slug} allTours={allTours} />
       </div>

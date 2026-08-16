@@ -11,7 +11,7 @@ import NewsletterForm from '@/components/NewsletterForm'
 export const metadata: Metadata = {
   title: '2027 Concert Tours: Confirmed Dates, Tickets & Tour News',
   description:
-    'Track every confirmed and rumored 2027 concert tour in one place. Real dates, official ticket links, and honest status updates — no fabricated schedules.'
+    'Track every confirmed and rumored 2027 tour and concert in one place. Real dates, official ticket links, and honest status updates on 2027 concert tours — no fabricated schedules.'
 }
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
@@ -79,6 +79,12 @@ export default function HomePage() {
             Real dates when they're confirmed. Honest "nothing announced yet" when they're not.
             No fabricated schedules, ever.
           </p>
+          <p className="text-muted mt-4 max-w-xl text-sm leading-relaxed">
+            This is a running tracker of 2027 tours and 2027 concerts across every genre — from
+            confirmed stadium runs to artists who haven't announced anything yet. Use it as your 2027
+            tour calendar: search an artist, filter by status or genre, and get the real story behind
+            every upcoming 2027 concert.
+          </p>
 
           <div className="flex items-center gap-3 mt-8 flex-wrap">
             <div className="bg-white border border-black/10 rounded-xl px-4 py-2.5 shadow-sm">
@@ -101,6 +107,38 @@ export default function HomePage() {
       <section className="mb-16">
         <TourExplorer tours={tours} />
       </section>
+
+      {/* Crawlable genre content */}
+      {genres.length > 0 && (
+        <section className="mb-16 py-10 border-t border-black/10">
+          <Eyebrow>By genre</Eyebrow>
+          <h2 className="font-display text-2xl font-bold mb-4">2027 tours and concerts by genre</h2>
+          <p className="text-muted mb-6 max-w-2xl">
+            Browse 2027 concert tours by genre — from confirmed stadium runs to artists who haven't
+            announced 2027 plans yet.
+          </p>
+          <div className="grid gap-6 sm:grid-cols-2">
+            {genres.map((genre) => {
+              const genreTours = tours.filter((t) => t.genre === genre)
+              return (
+                <div key={genre}>
+                  <h3 className="font-display text-base font-semibold mb-2">{genre} 2027 tours</h3>
+                  <ul className="space-y-1">
+                    {genreTours.map((t) => (
+                      <li key={t.slug}>
+                        <NextLink href={`/tours/${t.slug}`} className="text-sm text-accent hover:underline">
+                          {t.artist} Tour 2027
+                        </NextLink>
+                        <span className="text-xs text-muted"> — {t.status}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )
+            })}
+          </div>
+        </section>
+      )}
 
       {/* Crawlable summary content - confirmed tours */}
       {confirmedTours.length > 0 && (
@@ -137,9 +175,9 @@ export default function HomePage() {
           <Eyebrow>Not confirmed yet</Eyebrow>
           <h2 className="font-display text-2xl font-bold mb-4">2027 tours that haven't been confirmed yet</h2>
           <p className="text-muted mb-6 max-w-2xl">
-            Not every artist has announced 2027 plans yet. These pages track the real state of things —
-            rumors, hints from the artist, or a plain "nothing announced" — updated as new information
-            comes out.
+            Not every artist has announced 2027 tour plans yet. These pages track the real status of
+            each artist's 2027 concerts — rumors, hints from the artist, or a plain "nothing
+            announced" — updated as new information comes out.
           </p>
           <ul className="grid gap-2 sm:grid-cols-2">
             {unconfirmedTours.map((t) => (
@@ -194,7 +232,7 @@ export default function HomePage() {
         <Eyebrow>Questions</Eyebrow>
         <div className="flex items-center gap-2 mb-6">
           <HelpCircle size={22} className="text-accent" />
-          <h2 className="font-display text-2xl font-bold">Frequently asked questions</h2>
+          <h2 className="font-display text-2xl font-bold">2027 tour and concert FAQs</h2>
         </div>
         <FAQAccordion />
       </section>
