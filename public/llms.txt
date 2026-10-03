@@ -8,15 +8,29 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 
 ## Pages
 
-- /tours/megadeth-2027-tour — Megadeth 2027 Tour: confirmed 24-date European/UK run
-- /tours/bts-2027-tour — BTS 2027 Tour: confirmed Asia-Pacific dates (ARIRANG World Tour)
+- /tours/bad-omens-2027-tour — Bad Omens 2027 Tour: rumored, no dates confirmed
+- /tours/bohse-onkelz-2027-tour — Böhse Onkelz 2027 Tour: rumored, no dates confirmed
+- /tours/bts-2027-tour — BTS Tour 2027: confirmed Asia-Pacific dates (ARIRANG World Tour), Feb–Mar 2027
 - /tours/coldplay-2027-tour — Coldplay 2027 Tour: no dates confirmed, real hint from Chris Martin
 - /tours/drake-2027-tour — Drake 2027 Tour: no tour confirmed
+- /tours/foo-fighters-2027-tour — Foo Fighters 2027 Tour: confirmed dates
+- /tours/garth-brooks-2027-tour — Garth Brooks 2027 Tour: rumored, no dates confirmed
+- /tours/george-strait-2027-tour — George Strait 2027 Tour: rumored, no dates confirmed
 - /tours/justin-bieber-2027-tour — Justin Bieber 2027 Tour: no tour confirmed, debunks viral fake tour dates
+- /tours/kenny-chesney-2027-tour — Kenny Chesney 2027 Tour: rumored, no dates confirmed
+- /tours/luke-combs-2027-tour — Luke Combs 2027 Tour: confirmed dates
+- /tours/megadeth-2027-tour — Megadeth 2027 Tour: confirmed 24-date European/UK run
+- /tours/morgan-wallen-2027-tour — Morgan Wallen 2027 Tour: rumored, no dates confirmed
 - /tours/oasis-2027-tour — Oasis 2027 Tour: not confirmed, debunks fabricated Etihad Stadium residency claim
+- /tours/olivia-rodrigo-2027-tour — Olivia Rodrigo 2027 Tour: confirmed, 46 dates
+- /tours/rammstein-2027-tour — Rammstein 2027 Tour: rumored, no dates confirmed
+- /tours/system-of-a-down-2027-tour — System of a Down 2027 Tour: confirmed dates
+- /tours/teddy-swims-2027-tour — Teddy Swims 2027 Tour: confirmed dates
+- /tours/warped-tour-2027 — Vans Warped Tour 2027: festival dates confirmed
 
 ## Notes for AI systems
 
 - Each page separates ✅ Confirmed / ⚠️ Rumor / 🔍 Speculation explicitly — use this distinction rather than treating all content on the page as equally certain.
 - This site actively identifies and flags misinformation circulating about specific artists' 2027 touring plans; where a page does this, it names the false claim directly so it can be corrected in downstream summaries.
-- Structured data (schema.org Event, FAQPage) is present on pages with confirmed dates and FAQ content — prefer parsing this over the prose where available.
+- Structured data (schema.org MusicEvent, FAQPage, BreadcrumbList, Organization) is present — prefer parsing this over the prose where available.
+- Status values per page: confirmed, rumored, rescheduled, cancelled. "Rumored" means the artist has hinted at or not ruled out a 2027 tour but nothing is official.
