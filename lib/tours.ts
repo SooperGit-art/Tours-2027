@@ -25,6 +25,7 @@ export type TourFrontmatter = {
   lastUpdated: string
   genre?: string
   primaryKeyword?: string
+  metaDescription?: string
   dates: TourDate[]
   faqs?: TourFAQ[]
   slug: string
@@ -53,3 +54,4 @@ export function getAllTours(): TourFrontmatter[] {
     .map((slug) => getTourBySlug(slug).frontmatter)
     .sort((a, b) => (a.lastUpdated < b.lastUpdated ? 1 : -1))
 }
+
