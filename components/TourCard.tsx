@@ -39,9 +39,9 @@ export default function TourCard({ tour }: { tour: TourFrontmatter }) {
       <div className="p-5">
         <div className="flex items-start justify-between gap-3">
           <div className="min-w-0">
-            <h2 className="font-display text-xl font-semibold group-hover:text-accent transition-colors truncate">
+            <h3 className="font-display text-xl font-semibold group-hover:text-accent transition-colors truncate">
               {tour.artist}
-            </h2>
+            </h3>
             <p className="text-muted text-sm mt-1 truncate">{tour.tourName}</p>
           </div>
           <span className={`shrink-0 text-xs px-2.5 py-1 rounded-full font-semibold capitalize ${statusColors[tour.status] || ''}`}>
