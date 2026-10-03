@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import Link from 'next/link'
 import Script from 'next/script'
+import JsonLd from '@/components/JsonLd'
 import './globals.css'
 
 export const viewport: Viewport = {
@@ -44,9 +45,21 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const organizationLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: '2027.tours',
+    url: 'https://2027.tours',
+    description:
+      'Independent tracker for 2027 concert tour announcements, dates, venues, and ticket updates. Not affiliated with any artist or ticketing platform.',
+    foundingDate: '2026',
+    knowsAbout: ['concert tours', '2027 tour dates', 'live music', 'ticketing']
+  }
+
   return (
     <html lang="en">
       <body className="min-h-screen font-body antialiased">
+        <JsonLd data={organizationLd} />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-6G017KHLTE"
           strategy="afterInteractive"
@@ -64,8 +77,9 @@ export default function RootLayout({
             <Link href="/" className="font-display text-2xl font-bold tracking-tight">
               2027<span className="text-accent">.</span>tours
             </Link>
-            <nav className="text-sm text-muted">
+            <nav className="text-sm text-muted flex items-center gap-5">
               <Link href="/" className="hover:text-ink">All Tours</Link>
+              <Link href="/about" className="hover:text-ink">About</Link>
             </nav>
           </div>
         </header>
@@ -85,3 +99,4 @@ export default function RootLayout({
     </html>
   )
 }
+
