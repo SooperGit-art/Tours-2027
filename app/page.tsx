@@ -380,7 +380,7 @@ export default function HomePage() {
           {azTours.map((t) => (
             <li key={t.slug} className="flex items-baseline gap-2 text-sm border-b border-black/5 pb-2">
               <NextLink href={`/tours/${t.slug}`} className="font-medium hover:text-accent transition-colors">
-                {t.artist} Tour 2027
+                {t.artist.endsWith('Tour') ? t.artist + ' 2027' : t.artist + ' Tour 2027'}
               </NextLink>
               <span className="text-xs text-muted capitalize ml-auto shrink-0">{t.status}</span>
             </li>
