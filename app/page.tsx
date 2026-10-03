@@ -198,6 +198,51 @@ export default function HomePage() {
         </section>
       )}
 
+      {/* Tour spotlight - in-text links to top pages */}
+      <section className="mb-16 py-10 border-t border-black/10">
+        <Eyebrow>Spotlight</Eyebrow>
+        <h2 className="font-display text-2xl font-bold mb-4">2027 tours worth watching right now</h2>
+        <div className="max-w-3xl space-y-4 text-muted leading-relaxed">
+          <p>
+            A few 2027 tours are already shaping up to be the year's biggest stories. K-pop fans
+            should watch the{' '}
+            <NextLink href="/tours/bts-2027-tour" className="text-accent hover:underline font-medium">
+              BTS Tour 2027
+            </NextLink>
+            , the closing leg of the record-breaking ARIRANG World Tour, while pop's biggest
+            arena draw is covered on our{' '}
+            <NextLink href="/tours/olivia-rodrigo-2027-tour" className="text-accent hover:underline font-medium">
+              Olivia Rodrigo 2027 tour dates
+            </NextLink>{' '}
+            page — 46 confirmed shows and counting.
+          </p>
+          <p>
+            Country dominates the confirmed list: the{' '}
+            <NextLink href="/tours/luke-combs-2027-tour" className="text-accent hover:underline font-medium">
+              Luke Combs 2027 tour
+            </NextLink>{' '}
+            and{' '}
+            <NextLink href="/tours/teddy-swims-2027-tour" className="text-accent hover:underline font-medium">
+              Teddy Swims 2027 tour dates
+            </NextLink>{' '}
+            both have real schedules posted. On the heavier side,{' '}
+            <NextLink href="/tours/megadeth-2027-tour" className="text-accent hover:underline font-medium">
+              Megadeth's 2027 European tour
+            </NextLink>
+            , the{' '}
+            <NextLink href="/tours/foo-fighters-2027-tour" className="text-accent hover:underline font-medium">
+              Foo Fighters 2027 tour
+            </NextLink>
+            , and{' '}
+            <NextLink href="/tours/system-of-a-down-2027-tour" className="text-accent hover:underline font-medium">
+              System of a Down 2027 tour
+            </NextLink>{' '}
+            are the metal and rock dates to track. Every page is re-verified against official
+            sources — check the "Updated" date at the top of each tour page.
+          </p>
+        </div>
+      </section>
+
       {/* Why this site */}
       <section className="mb-16 py-12 -mx-4 px-4 sm:mx-0 sm:px-0 bg-black/[0.02] rounded-2xl">
         <Eyebrow>Our approach</Eyebrow>
@@ -253,3 +298,4 @@ export default function HomePage() {
     </div>
   )
 }
+
