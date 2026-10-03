@@ -27,6 +27,32 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/system-of-a-down-2027-tour — System of a Down 2027 Tour: confirmed dates
 - /tours/teddy-swims-2027-tour — Teddy Swims 2027 Tour: confirmed dates
 - /tours/warped-tour-2027 — Vans Warped Tour 2027: festival dates confirmed
+- /tours/alex-warren-2027-tour — Alex Warren Tour 2027: confirmed, 9 dates
+- /tours/backstreet-boys-2027-tour — Backstreet Boys Tour 2027: confirmed, 6 dates
+- /tours/david-gilmour-2027-tour — David Gilmour Tour 2027: rumored, no dates confirmed
+- /tours/die-arzte-2027-tour — Die Ärzte Tour 2027: confirmed, 32 dates
+- /tours/emeli-sande-2027-tour — Emeli Sandé Tour 2027: confirmed, 21 dates
+- /tours/erasure-2027-tour — Erasure Tour 2027: confirmed, 20 dates
+- /tours/florence-and-the-machine-2027-tour — Florence and the Machine Tour 2027: rumored, no dates confirmed
+- /tours/fontaines-dc-2027-tour — Fontaines D.C. Tour 2027: confirmed, 29 dates
+- /tours/greta-van-fleet-2027-tour — Greta Van Fleet Tour 2027: confirmed, 56 dates
+- /tours/herbert-gronemeyer-2027-tour — Herbert Grönemeyer Tour 2027: confirmed, 20 dates
+- /tours/kings-of-leon-2027-tour — Kings of Leon Tour 2027: confirmed, 2 dates
+- /tours/kraftklub-2027-tour — Kraftklub Tour 2027: confirmed, 4 dates
+- /tours/metallica-2027-tour — Metallica Tour 2027: confirmed, 12 dates
+- /tours/n-dubz-2027-tour — N-Dubz Tour 2027: confirmed, 8 dates
+- /tours/partynextdoor-2027-tour — PartyNextDoor Tour 2027: rumored, no dates confirmed
+- /tours/rod-stewart-2027-tour — Rod Stewart Tour 2027: confirmed, 27 dates
+- /tours/roland-kaiser-2027-tour — Roland Kaiser Tour 2027: confirmed, 33 dates
+- /tours/sam-fender-2027-tour — Sam Fender Tour 2027: rumored, no dates confirmed
+- /tours/sleep-token-2027-tour — Sleep Token Tour 2027: rumored, no dates confirmed
+- /tours/slipknot-2027-tour — Slipknot Tour 2027: confirmed, 5 dates
+- /tours/stray-kids-2027-tour — Stray Kids Tour 2027: confirmed, 4 dates
+- /tours/take-that-2027-tour — Take That Tour 2027: confirmed, 19 dates
+- /tours/the-weeknd-2027-tour — The Weeknd Tour 2027: rumored, no dates confirmed
+- /tours/unheilig-2027-tour — Unheilig Tour 2027: confirmed, 16 dates
+- /tours/world-collide-2027-tour — Disney Worlds Collide Tour 2027: confirmed, 11 dates
+- /tours/zach-bryan-2027-tour — Zach Bryan Tour 2027: rumored, no dates confirmed
 
 ## Notes for AI systems
 
