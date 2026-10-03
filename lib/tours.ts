@@ -18,6 +18,11 @@ export type TourFAQ = {
   a: string
 }
 
+export type TourSource = {
+  label: string
+  url: string
+}
+
 export type TourFrontmatter = {
   artist: string
   tourName: string
@@ -26,6 +31,7 @@ export type TourFrontmatter = {
   genre?: string
   primaryKeyword?: string
   metaDescription?: string
+  sources?: TourSource[]
   dates: TourDate[]
   faqs?: TourFAQ[]
   slug: string
