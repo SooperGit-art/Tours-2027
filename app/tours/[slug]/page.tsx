@@ -31,6 +31,13 @@ export async function generateStaticParams() {
   return getAllTourSlugs().map((slug) => ({ slug }))
 }
 
+const statusDescriptions: Record<string, string> = {
+  confirmed: 'Yes — confirmed dates are listed below with venues and ticket links.',
+  rescheduled: 'Dates have been rescheduled — see the updated schedule below.',
+  cancelled: 'The tour has been cancelled — details and what we know below.',
+  rumored: 'Nothing officially confirmed yet — here is what is real and what is rumor.'
+}
+
 export async function generateMetadata({
   params
 }: {
@@ -40,7 +47,9 @@ export async function generateMetadata({
     const { frontmatter } = getTourBySlug(params.slug)
     const primaryKeyword = frontmatter.primaryKeyword || `${frontmatter.artist} Tour 2027`
     const title = `${primaryKeyword}: Dates, Tickets & News | 2027.tours`
-    const description = `Latest updates on ${frontmatter.artist}'s ${frontmatter.tourName}: dates, venues, and status.`
+    const description =
+      frontmatter.metaDescription ||
+      `Is ${frontmatter.artist} touring in 2027? ${statusDescriptions[frontmatter.status] || ''} Track the ${frontmatter.tourName} — honest status updates, last verified ${frontmatter.lastUpdated}.`
     const url = `${BASE_URL}/tours/${params.slug}`
 
     return {
@@ -319,3 +328,4 @@ export default function TourPage({ params }: { params: { slug: string } }) {
     </article>
   )
 }
+
