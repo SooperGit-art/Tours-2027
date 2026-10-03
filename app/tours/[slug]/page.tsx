@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowLeft, CheckCircle2, SearchX, RefreshCw, XCircle, Calendar, Clock, HelpCircle, Ticket } from 'lucide-react'
+import { ArrowLeft, CheckCircle2, SearchX, RefreshCw, XCircle, Calendar, Clock, HelpCircle, Ticket, TrendingUp } from 'lucide-react'
 import { getAllTourSlugs, getAllTours, getTourBySlug } from '@/lib/tours'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import type { Metadata } from 'next'
@@ -96,6 +96,13 @@ const statusIcons: Record<string, typeof CheckCircle2> = {
   rumored: SearchX
 }
 
+const statusDotColors: Record<string, string> = {
+  confirmed: 'bg-green-500',
+  rescheduled: 'bg-amber-400',
+  cancelled: 'bg-red-500',
+  rumored: 'bg-gray-300'
+}
+
 const statusToEventStatus: Record<string, string> = {
   confirmed: 'https://schema.org/EventScheduled',
   rescheduled: 'https://schema.org/EventRescheduled',
@@ -121,6 +128,25 @@ export default function TourPage({ params }: { params: { slug: string } }) {
   const pageUrl = `${BASE_URL}/tours/${params.slug}`
   const allTours = getAllTours()
   const StatusIcon = statusIcons[frontmatter.status] || SearchX
+
+  const upcomingDates = (frontmatter.dates || [])
+    .filter((d) => daysUntil(d.date) >= 0)
+    .sort((a, b) => a.date.localeCompare(b.date))
+  const nextShow = upcomingDates[0]
+  const trendingTours = allTours
+    .filter((t) => t.slug !== params.slug && t.status === 'confirmed')
+    .sort((a, b) => (b.dates?.length || 0) - (a.dates?.length || 0))
+    .slice(0, 5)
+  const sameGenreTours = allTours
+    .filter((t) => t.slug !== params.slug && t.genre && t.genre === frontmatter.genre)
+    .slice(0, 5)
+  const moreTours =
+    sameGenreTours.length >= 3
+      ? sameGenreTours
+      : [...allTours]
+          .filter((t) => t.slug !== params.slug)
+          .sort((a, b) => b.lastUpdated.localeCompare(a.lastUpdated))
+          .slice(0, 5)
 
   const breadcrumbLd = {
     '@context': 'https://schema.org',
@@ -197,6 +223,7 @@ export default function TourPage({ params }: { params: { slug: string } }) {
       : null
 
   return (
+    <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-10 lg:items-start">
     <article>
       <JsonLd data={breadcrumbLd} />
       <JsonLd data={webPageLd} />
@@ -326,6 +353,80 @@ export default function TourPage({ params }: { params: { slug: string } }) {
         <RelatedTours currentSlug={params.slug} allTours={allTours} />
       </div>
     </article>
+
+    <aside className="mt-10 lg:mt-0 space-y-6 lg:sticky lg:top-24">
+      {/* At a glance */}
+      <div className="rounded-2xl border border-black/10 bg-white p-5">
+        <h3 className="text-xs font-semibold tracking-widest uppercase text-muted mb-4">At a glance</h3>
+        <span className={`inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full font-medium capitalize mb-4 ${statusColors[frontmatter.status] || ''}`}>
+          <StatusIcon size={14} />
+          {frontmatter.status}
+        </span>
+        <dl className="space-y-2.5 text-sm">
+          <div className="flex justify-between gap-2">
+            <dt className="text-muted">Dates listed</dt>
+            <dd className="font-semibold">{frontmatter.dates?.length ? `${frontmatter.dates.length}` : 'None yet'}</dd>
+          </div>
+          {nextShow && (
+            <div className="flex justify-between gap-2">
+              <dt className="text-muted">Next show</dt>
+              <dd className="font-semibold text-right">
+                {nextShow.city}
+                <span className="block text-muted font-normal text-xs">{nextShow.date}</span>
+              </dd>
+            </div>
+          )}
+          <div className="flex justify-between gap-2">
+            <dt className="text-muted">Last verified</dt>
+            <dd className="font-semibold">{frontmatter.lastUpdated}</dd>
+          </div>
+        </dl>
+      </div>
+
+      {/* Trending */}
+      {trendingTours.length > 0 && (
+        <div className="rounded-2xl border border-black/10 bg-white p-5">
+          <h3 className="text-xs font-semibold tracking-widest uppercase text-muted mb-2 flex items-center gap-1.5">
+            <TrendingUp size={13} className="text-accent" /> Trending tours
+          </h3>
+          <ul className="divide-y divide-black/5">
+            {trendingTours.map((t) => (
+              <li key={t.slug}>
+                <Link href={`/tours/${t.slug}`} className="group flex items-center gap-2.5 py-2.5">
+                  <span className={`w-2 h-2 rounded-full shrink-0 ${statusDotColors[t.status] || 'bg-gray-300'}`} aria-hidden />
+                  <span className="text-sm font-medium group-hover:text-accent transition-colors truncate">{t.artist}</span>
+                  <span className="text-xs text-muted ml-auto shrink-0">{t.dates?.length || 0} dates</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* More like this */}
+      {moreTours.length > 0 && (
+        <div className="rounded-2xl border border-black/10 bg-white p-5">
+          <h3 className="text-xs font-semibold tracking-widest uppercase text-muted mb-2">
+            {sameGenreTours.length >= 3 && frontmatter.genre ? `More ${frontmatter.genre} tours` : 'Recently updated'}
+          </h3>
+          <ul className="divide-y divide-black/5">
+            {moreTours.map((t) => (
+              <li key={t.slug}>
+                <Link href={`/tours/${t.slug}`} className="group flex items-center gap-2.5 py-2.5">
+                  <span className={`w-2 h-2 rounded-full shrink-0 ${statusDotColors[t.status] || 'bg-gray-300'}`} aria-hidden />
+                  <span className="text-sm font-medium group-hover:text-accent transition-colors truncate">{t.artist}</span>
+                  <span className="text-xs text-muted ml-auto shrink-0 capitalize">{t.status}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <Link href="/" className="inline-flex items-center gap-1 text-xs font-semibold text-accent hover:underline mt-3">
+            View all {allTours.length} tours <ArrowLeft size={12} className="rotate-180" />
+          </Link>
+        </div>
+      )}
+    </aside>
+    </div>
   )
 }
 
