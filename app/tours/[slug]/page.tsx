@@ -8,6 +8,7 @@ import Callout from '@/components/Callout'
 import JsonLd from '@/components/JsonLd'
 import FAQAccordion from '@/components/FAQAccordion'
 import RelatedTours from '@/components/RelatedTours'
+import { genreGradient } from '@/components/genreArt'
 
 const BASE_URL = 'https://2027.tours'
 
@@ -46,7 +47,7 @@ export async function generateMetadata({
   try {
     const { frontmatter } = getTourBySlug(params.slug)
     const primaryKeyword = frontmatter.primaryKeyword || `${frontmatter.artist} Tour 2027`
-    const title = `${primaryKeyword}: Dates, Tickets & News | 2027.tours`
+    const title = `${primaryKeyword}: Dates, Tickets & News`
     const description =
       frontmatter.metaDescription ||
       `Is ${frontmatter.artist} touring in 2027? ${statusDescriptions[frontmatter.status] || ''} Track the ${frontmatter.tourName} — honest status updates, last verified ${frontmatter.lastUpdated}.`
@@ -80,13 +81,6 @@ const statusColors: Record<string, string> = {
   rescheduled: 'bg-yellow-100 text-yellow-800',
   cancelled: 'bg-red-100 text-red-800',
   rumored: 'bg-gray-100 text-gray-700'
-}
-
-const statusBarColors: Record<string, string> = {
-  confirmed: 'bg-green-500',
-  rescheduled: 'bg-yellow-500',
-  cancelled: 'bg-red-500',
-  rumored: 'bg-gray-300'
 }
 
 const statusIcons: Record<string, typeof CheckCircle2> = {
@@ -133,6 +127,14 @@ export default function TourPage({ params }: { params: { slug: string } }) {
     .filter((d) => daysUntil(d.date) >= 0)
     .sort((a, b) => a.date.localeCompare(b.date))
   const nextShow = upcomingDates[0]
+  const dateCount = (frontmatter.dates || []).length
+  const sortedAllDates = [...(frontmatter.dates || [])].sort((a, b) => a.date.localeCompare(b.date))
+  const dateRange =
+    dateCount === 0
+      ? 'To be announced'
+      : dateCount === 1
+        ? sortedAllDates[0].date
+        : `${sortedAllDates[0].date} – ${sortedAllDates[dateCount - 1].date}`
   const trendingTours = allTours
     .filter((t) => t.slug !== params.slug && t.status === 'confirmed')
     .sort((a, b) => (b.dates?.length || 0) - (a.dates?.length || 0))
@@ -241,24 +243,54 @@ export default function TourPage({ params }: { params: { slug: string } }) {
       </Link>
 
       <div className="relative rounded-2xl border border-black/10 bg-white overflow-hidden mb-8 animate-fade-in-up">
-        <div className={`h-1.5 w-full ${statusBarColors[frontmatter.status] || 'bg-gray-300'}`} />
+        <figure
+          className={`relative h-36 sm:h-44 bg-gradient-to-br ${genreGradient(frontmatter.genre)}`}
+          role="img"
+          aria-label={`${primaryKeyword}: ${frontmatter.tourName}`}
+        >
+          <span
+            aria-hidden="true"
+            className="absolute inset-0 flex items-center justify-center font-display text-6xl sm:text-7xl font-bold text-white/90 select-none"
+          >
+            {frontmatter.artist.charAt(0)}
+          </span>
+          <span className="absolute top-4 right-4 inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full font-semibold capitalize bg-white/95 text-ink shadow-sm">
+            <span className={`w-2 h-2 rounded-full ${statusDotColors[frontmatter.status] || 'bg-gray-300'}`} aria-hidden="true" />
+            {frontmatter.status}
+          </span>
+        </figure>
         <div className="p-6 sm:p-8">
-          <div className="flex items-start justify-between gap-3 mb-2">
-            <h1 className="font-display text-3xl sm:text-4xl font-bold">{frontmatter.artist}</h1>
-            <span
-              className={`shrink-0 inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full font-medium capitalize ${statusColors[frontmatter.status] || ''}`}
-            >
-              <StatusIcon size={14} />
-              {frontmatter.status}
-            </span>
-          </div>
-          <h2 className="font-display text-lg font-semibold text-accent mb-3">{primaryKeyword}</h2>
+          <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-2">{frontmatter.artist}</p>
+          <h1 className="font-display text-3xl sm:text-4xl font-bold mb-3">{primaryKeyword}</h1>
           <div className="flex items-center gap-1.5 text-sm text-muted">
             <Clock size={14} />
             <span>{frontmatter.tourName} — Updated {frontmatter.lastUpdated}</span>
           </div>
         </div>
       </div>
+
+      {/* Key facts — quick GEO/AIEO answer block */}
+      <section aria-label="Key facts" className="mb-8 rounded-2xl border border-black/10 bg-black/[0.02] p-5 sm:p-6">
+        <h2 className="text-xs font-semibold tracking-widest uppercase text-muted mb-4">Key facts</h2>
+        <dl className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div>
+            <dt className="text-xs text-muted mb-1">Status</dt>
+            <dd className="font-semibold text-sm capitalize">{frontmatter.status}</dd>
+          </div>
+          <div>
+            <dt className="text-xs text-muted mb-1">Dates announced</dt>
+            <dd className="font-semibold text-sm">{dateCount > 0 ? `${dateCount} shows` : 'None yet'}</dd>
+          </div>
+          <div>
+            <dt className="text-xs text-muted mb-1">Tour window</dt>
+            <dd className="font-semibold text-sm">{dateRange}</dd>
+          </div>
+          <div>
+            <dt className="text-xs text-muted mb-1">Last verified</dt>
+            <dd className="font-semibold text-sm">{frontmatter.lastUpdated}</dd>
+          </div>
+        </dl>
+      </section>
 
       {frontmatter.dates?.length > 0 ? (
         <div className="mb-10 border border-black/10 rounded-xl overflow-hidden shadow-sm">
@@ -330,6 +362,31 @@ export default function TourPage({ params }: { params: { slug: string } }) {
       <div className="prose prose-neutral max-w-none prose-headings:font-display prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:border-b prose-h2:border-black/10 prose-h2:pb-2 prose-h3:text-lg prose-h3:mt-6 prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-strong:text-ink prose-table:text-sm prose-blockquote:border-accent prose-blockquote:not-italic prose-blockquote:font-normal prose-blockquote:text-muted">
         <MDXRemote source={content} components={{ Callout }} />
       </div>
+
+      {frontmatter.sources && frontmatter.sources.length > 0 && (
+        <div className="mt-10 pt-8 border-t border-black/10">
+          <h2 className="font-display text-2xl font-bold mb-4">Sources</h2>
+          <ul className="space-y-2">
+            {frontmatter.sources.map((s) => (
+              <li key={s.url} className="text-sm">
+                <a
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:underline font-medium"
+                >
+                  {s.label}
+                </a>
+                <span className="text-muted"> — official source</span>
+              </li>
+            ))}
+          </ul>
+          <p className="text-xs text-muted mt-3">
+            Tour dates and announcements on this page are verified against the sources above.
+            Last checked {frontmatter.lastUpdated}.
+          </p>
+        </div>
+      )}
 
       {frontmatter.faqs && frontmatter.faqs.length > 0 && (
         <div className="mt-10 pt-8 border-t border-black/10">
