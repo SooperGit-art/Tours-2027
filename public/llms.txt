@@ -33,6 +33,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/emeli-sande-2027-tour — Emeli Sandé Tour 2027: confirmed, 21 dates
 - /tours/erasure-2027-tour — Erasure Tour 2027: confirmed, 20 dates
 - /tours/eros-ramazzotti-2027-tour — Eros Ramazzotti Tour 2027: confirmed, 25 dates
+- /tours/faith-no-more-2027-tour — Faith No More Tour 2027: confirmed, 9 dates
 - /tours/feine-sahne-fischfilet-2027-tour — Feine Sahne Fischfilet Tour 2027: confirmed, 14 dates
 - /tours/florence-and-the-machine-2027-tour — Florence and the Machine Tour 2027: rumored, no dates confirmed
 - /tours/fontaines-dc-2027-tour — Fontaines D.C. Tour 2027: confirmed, 29 dates
@@ -65,6 +66,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/olivia-dean-2027-tour — Olivia Dean Tour 2027: confirmed, 1 date (festival set)
 - /tours/olivia-rodrigo-2027-tour — Olivia Rodrigo 2027 Tour: confirmed, 46 dates
 - /tours/partynextdoor-2027-tour — PartyNextDoor Tour 2027: rumored, no dates confirmed
+- /tours/pink-2027-tour — P!nk Tour 2027: rumored, no dates confirmed
 - /tours/radiohead-2027-tour — Radiohead Tour 2027: confirmed, 21 dates
 - /tours/rammstein-2027-tour — Rammstein 2027 Tour: rumored, no dates confirmed
 - /tours/red-clay-strays-2027-tour — The Red Clay Strays Tour 2027: confirmed, 36 dates
