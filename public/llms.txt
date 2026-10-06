@@ -22,6 +22,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/bts-2027-tour — BTS Tour 2027: confirmed Asia-Pacific dates (ARIRANG World Tour), Feb–Mar 2027
 - /tours/calvin-harris-2027-tour — Calvin Harris Tour 2027: confirmed, 11 dates
 - /tours/chris-stapleton-2027-tour — Chris Stapleton Tour 2027: confirmed, 1 date
+- /tours/cody-johnson-2027-tour — Cody Johnson Tour 2027: confirmed, 3 dates
 - /tours/coldplay-2027-tour — Coldplay 2027 Tour: no dates confirmed, real hint from Chris Martin
 - /tours/daughtry-2027-tour — Daughtry Tour 2027: confirmed, 26 dates
 - /tours/david-gilmour-2027-tour — David Gilmour Tour 2027: rumored, no dates confirmed
@@ -99,6 +100,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/u2-2027-tour — U2 Tour 2027: rumored, no dates confirmed
 - /tours/unheilig-2027-tour — Unheilig Tour 2027: confirmed, 16 dates
 - /tours/warped-tour-2027 — Vans Warped Tour 2027: festival dates confirmed
+- /tours/warren-zeiders-2027-tour — Warren Zeiders Tour 2027: confirmed, 16 dates
 - /tours/will-young-2027-tour — Will Young Tour 2027: confirmed, 16 dates
 - /tours/world-collide-2027-tour — Disney Worlds Collide Tour 2027: confirmed, 11 dates
 - /tours/zach-bryan-2027-tour — Zach Bryan Tour 2027: rumored, no dates confirmed
