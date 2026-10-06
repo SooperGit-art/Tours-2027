@@ -9,6 +9,8 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 ## Pages
 
 - /tours/a-perfect-circle-2027-tour — A Perfect Circle Tour 2027: confirmed, 32 dates
+
+- /tours/adele-2027-tour — Adele Tour 2027: rumored, no dates confirmed
 - /tours/alex-warren-2027-tour — Alex Warren Tour 2027: confirmed, 9 dates
 - /tours/ana-gabriel-2027-tour — Ana Gabriel Tour 2027: rumored, no dates confirmed
 - /tours/arctic-monkeys-2027-tour — Arctic Monkeys Tour 2027: rumored, no dates confirmed
@@ -50,6 +52,8 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/james-blunt-2027-tour — James Blunt Tour 2027: confirmed, 21 dates
 - /tours/jay-wheeler-2027-tour — Jay Wheeler Tour 2027: confirmed, 27 dates
 - /tours/john-mayer-2027-tour — John Mayer Tour 2027: confirmed, 6 dates
+
+- /tours/judas-priest-2027-tour — Judas Priest Tour 2027: confirmed 2027 festival appearances (Tons of Rock Oslo, Tuska Helsinki)
 - /tours/justin-bieber-2027-tour — Justin Bieber 2027 Tour: no tour confirmed, debunks viral fake tour dates
 - /tours/kenny-chesney-2027-tour — Kenny Chesney 2027 Tour: rumored, no dates confirmed
 - /tours/kings-of-leon-2027-tour — Kings of Leon Tour 2027: confirmed, 2 dates
@@ -62,6 +66,8 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/manowar-2027-tour — Manowar Tour 2027: confirmed, 28 dates
 - /tours/megadeth-2027-tour — Megadeth 2027 Tour: confirmed 24-date European/UK run
 - /tours/metallica-2027-tour — Metallica Tour 2027: confirmed, 12 dates
+
+- /tours/montez-2027-tour — Montez Tour 2027: confirmed, 4 dates
 - /tours/morgan-wallen-2027-tour — Morgan Wallen 2027 Tour: rumored, no dates confirmed
 - /tours/mumford-and-sons-2027-tour — Mumford & Sons Tour 2027: rumored, no dates confirmed
 - /tours/n-dubz-2027-tour — N-Dubz Tour 2027: confirmed, 8 dates
@@ -95,10 +101,14 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/teddy-swims-2027-tour — Teddy Swims 2027 Tour: confirmed dates
 - /tours/the-1975-2027-tour — The 1975 Tour 2027: rumored, no dates confirmed
 - /tours/the-weeknd-2027-tour — The Weeknd Tour 2027: rumored, no dates confirmed
+
+- /tours/tokio-hotel-2027-tour — Tokio Hotel Tour 2027: confirmed, 13 dates (Summer Encore 2027)
 - /tours/treaty-oak-revival-2027-tour — Treaty Oak Revival Tour 2027: confirmed, 12 dates
 - /tours/txt-2027-tour — TXT Tour 2027: confirmed, 25 dates
 - /tours/u2-2027-tour — U2 Tour 2027: rumored, no dates confirmed
 - /tours/unheilig-2027-tour — Unheilig Tour 2027: confirmed, 16 dates
+
+- /tours/volbeat-2027-tour — Volbeat Tour 2027: rumored, no dates confirmed
 - /tours/warped-tour-2027 — Vans Warped Tour 2027: festival dates confirmed
 - /tours/warren-zeiders-2027-tour — Warren Zeiders Tour 2027: confirmed, 16 dates
 - /tours/will-young-2027-tour — Will Young Tour 2027: confirmed, 16 dates
