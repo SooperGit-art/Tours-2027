@@ -93,6 +93,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/simple-minds-2027-tour — Simple Minds Tour 2027: confirmed, 37 dates
 - /tours/sleep-token-2027-tour — Sleep Token Tour 2027: rumored, no dates confirmed
 - /tours/slipknot-2027-tour — Slipknot Tour 2027: confirmed, 5 dates
+- /tours/staind-2027-tour — Staind Tour 2027: confirmed, 27 dates
 - /tours/stevie-wonder-2027-tour — Stevie Wonder Tour 2027: rumored, no dates confirmed
 - /tours/stray-kids-2027-tour — Stray Kids Tour 2027: confirmed, 4 dates
 - /tours/system-of-a-down-2027-tour — System of a Down 2027 Tour: confirmed dates
