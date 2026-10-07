@@ -29,12 +29,14 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/chris-stapleton-2027-tour — Chris Stapleton Tour 2027: confirmed, 1 date
 - /tours/cody-johnson-2027-tour — Cody Johnson Tour 2027: confirmed, 3 dates
 - /tours/coldplay-2027-tour — Coldplay 2027 Tour: no dates confirmed, real hint from Chris Martin
+- /tours/conan-gray-2027-tour — Conan Gray Tour 2027: rumored, no dates confirmed
 - /tours/daughtry-2027-tour — Daughtry Tour 2027: confirmed, 26 dates
 - /tours/david-gilmour-2027-tour — David Gilmour Tour 2027: rumored, no dates confirmed
 - /tours/david-guetta-2027-tour — David Guetta Tour 2027: confirmed, 4 dates
 - /tours/depeche-mode-2027-tour — Depeche Mode Tour 2027: rumored, no dates confirmed
 - /tours/die-arzte-2027-tour — Die Ärzte Tour 2027: confirmed, 32 dates
 - /tours/die-toten-hosen-2027-tour — Die Toten Hosen Tour 2027: confirmed, 8 dates
+- /tours/djo-2027-tour — Djo Tour 2027: rumored, no dates confirmed
 - /tours/don-omar-2027-tour — Don Omar Tour 2027: confirmed, 17 dates
 - /tours/drake-2027-tour — Drake 2027 Tour: no tour confirmed
 - /tours/dua-lipa-2027-tour — Dua Lipa Tour 2027: rumored, no dates confirmed
@@ -50,6 +52,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/garth-brooks-2027-tour — Garth Brooks 2027 Tour: rumored, no dates confirmed
 - /tours/george-strait-2027-tour — George Strait 2027 Tour: rumored, no dates confirmed
 - /tours/gerry-cinnamon-2027-tour — Gerry Cinnamon Tour 2027: rumored, no dates confirmed
+- /tours/gracie-abrams-2027-tour — Gracie Abrams Tour 2027: confirmed, 54 dates
 - /tours/greta-van-fleet-2027-tour — Greta Van Fleet Tour 2027: confirmed, 56 dates
 - /tours/hans-zimmer-2027-tour — Hans Zimmer Tour 2027: confirmed, 30 dates
 - /tours/harry-styles-2027-tour — Harry Styles Tour 2027: confirmed, 41 dates
