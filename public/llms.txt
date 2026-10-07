@@ -17,6 +17,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/arctic-monkeys-2027-tour — Arctic Monkeys Tour 2027: rumored, no dates confirmed
 - /tours/backstreet-boys-2027-tour — Backstreet Boys Tour 2027: confirmed, 6 dates
 - /tours/bad-omens-2027-tour — Bad Omens 2027 Tour: rumored, no dates confirmed
+- /tours/billie-eilish-2027-tour — Billie Eilish Tour 2027: rumored, no dates confirmed
 - /tours/bohse-onkelz-2027-tour — Böhse Onkelz 2027 Tour: rumored, no dates confirmed
 - /tours/bring-me-the-horizon-2027-tour — Bring Me The Horizon Tour 2027: confirmed, 13 dates
 - /tours/bruce-springsteen-2027-tour — Bruce Springsteen Tour 2027: rumored, no dates confirmed
@@ -38,6 +39,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/drake-2027-tour — Drake 2027 Tour: no tour confirmed
 - /tours/dua-lipa-2027-tour — Dua Lipa Tour 2027: rumored, no dates confirmed
 - /tours/emeli-sande-2027-tour — Emeli Sandé Tour 2027: confirmed, 21 dates
+- /tours/eminem-2027-tour — Eminem Tour 2027: rumored, no dates confirmed
 - /tours/erasure-2027-tour — Erasure Tour 2027: confirmed, 20 dates
 - /tours/eros-ramazzotti-2027-tour — Eros Ramazzotti Tour 2027: confirmed, 25 dates
 - /tours/faith-no-more-2027-tour — Faith No More Tour 2027: confirmed, 9 dates
@@ -58,6 +60,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 
 - /tours/judas-priest-2027-tour — Judas Priest Tour 2027: confirmed 2027 festival appearances (Tons of Rock Oslo, Tuska Helsinki)
 - /tours/justin-bieber-2027-tour — Justin Bieber 2027 Tour: no tour confirmed, debunks viral fake tour dates
+- /tours/kendrick-lamar-2027-tour — Kendrick Lamar Tour 2027: rumored, no dates confirmed
 - /tours/kenny-chesney-2027-tour — Kenny Chesney 2027 Tour: rumored, no dates confirmed
 - /tours/kings-of-leon-2027-tour — Kings of Leon Tour 2027: confirmed, 2 dates
 - /tours/kontra-k-2027-tour — Kontra K Tour 2027: confirmed, 12 dates
