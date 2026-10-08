@@ -73,7 +73,7 @@ export default function TourCard({ tour }: { tour: TourFrontmatter }) {
         ) : (
           <p className="text-sm text-muted mt-3">No dates announced yet — we track the rumors</p>
         )}
-        <p className="text-xs text-muted mt-3">Updated {tour.lastUpdated}</p>
+        <p className="text-xs text-muted mt-3">Updated <time dateTime={tour.lastUpdated}>{tour.lastUpdated}</time></p>
       </div>
     </Link>
   )
