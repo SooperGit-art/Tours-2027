@@ -88,6 +88,7 @@ export default function RootLayout({
           <div className="max-w-6xl mx-auto px-4 py-10 text-sm text-muted">
             <div className="flex flex-wrap gap-x-6 gap-y-2 mb-6">
               <Link href="/about" className="hover:text-ink">About</Link>
+              <Link href="/contact" className="hover:text-ink">Contact</Link>
               <Link href="/privacy" className="hover:text-ink">Privacy Policy</Link>
               <Link href="/terms" className="hover:text-ink">Terms</Link>
               <Link href="/disclaimer" className="hover:text-ink">Disclaimer</Link>
