@@ -1,570 +1,402 @@
-import Link from 'next/link'
-import { ArrowLeft, CheckCircle2, SearchX, RefreshCw, XCircle, Calendar, Clock, HelpCircle, Ticket, TrendingUp } from 'lucide-react'
-import { getAllTourSlugs, getAllTours, getTourBySlug } from '@/lib/tours'
-import { MDXRemote } from 'next-mdx-remote/rsc'
 import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
-import Callout from '@/components/Callout'
+import NextLink from 'next/link'
+import { ShieldCheck, SearchX, Link2, HelpCircle, ArrowRight, BadgeCheck, LayoutGrid, Clock, Music2, ArrowUpRight } from 'lucide-react'
+import { getAllTours, type TourFrontmatter } from '@/lib/tours'
+import { homepageFaqs } from '@/lib/homepageFaqs'
 import JsonLd from '@/components/JsonLd'
-import FAQAccordion from '@/components/FAQAccordion'
-import RelatedTours from '@/components/RelatedTours'
+import TourExplorer from '@/components/TourExplorer'
+import TrendingStrip from '@/components/TrendingStrip'
 import { genreGradient } from '@/components/genreArt'
+import FAQAccordion from '@/components/FAQAccordion'
 
-const BASE_URL = 'https://2027.tours'
-
-const homepageAnchors = [
-  '2027 tour tracker',
-  'list of 2027 concerts',
-  '2027 concert tour calendar',
-  '2027 tours and concerts',
-  'full list of 2027 tours'
-]
-
-function hashStr(s: string): number {
-  let hash = 0
-  for (let i = 0; i < s.length; i++) {
-    hash = (hash * 31 + s.charCodeAt(i)) >>> 0
-  }
-  return hash
+export const metadata: Metadata = {
+  title: '2027 Concert Tours: Confirmed Dates, Tickets & Tour News',
+  description:
+    'Every confirmed and rumored 2027 concert tour in one place — real dates, official ticket links, honest status updates.'
 }
 
-function homepageAnchorText(slug: string): string {
-  return homepageAnchors[hashStr(slug) % homepageAnchors.length]
-}
 
-// Rotating natural title templates (absolute — bypasses the "| 2027.tours"
-// layout suffix so every title stays <= 60 chars). Assigned deterministically
-// by slug so titles are stable across builds.
-function pageTitle(slug: string, artist: string, status: string, dateCount: number): string {
-  switch (hashStr(slug) % 6) {
-    case 0:
-      return status === 'confirmed' && dateCount > 0
-        ? `${artist} Tour 2027: ${dateCount} Dates, Tickets & News`
-        : `${artist} Tour 2027: Dates, Tickets & News`
-    case 1:
-      return `Is ${artist} Touring in 2027? Latest Updates`
-    case 2:
-      return `${artist} 2027 Concerts: Schedule & Ticket Info`
-    case 3:
-      return `${artist} Live in 2027: Tour Dates & News`
-    case 4:
-      return `${artist} 2027 Tour Schedule: Dates & Tickets`
-    default:
-      return `${artist} Concert Tour 2027: Dates & Updates`
-  }
-}
-
-// H1 uses a different hash salt than the title so the two never share a
-// template on the same page.
-function pageH1(slug: string, artist: string): string {
-  switch (hashStr(slug + ':h1') % 3) {
-    case 0:
-      return `${artist} Tour 2027`
-    case 1:
-      return `${artist} 2027 Tour Dates & Schedule`
-    default:
-      return `Is ${artist} Touring in 2027?`
-  }
-}
-
-// Never show "(Not Announced)" on a confirmed page — a data-level guard in
-// case a tourName was never updated after confirmation.
-function displayTourName(status: string, tourName: string): string {
-  if (status !== 'rumored') {
-    return tourName.replace(/\s*\(Not Announced\)\s*$/i, '').trim() || '2027 Tour'
-  }
-  return tourName
-}
-
-// Split "City, ST" / "City, ST, USA" / "City, Country" into schema.org address parts.
-function splitAddress(city: string): { addressLocality: string; addressRegion?: string; addressCountry?: string } {
-  const parts = city.split(',').map((s) => s.trim()).filter(Boolean)
-  if (parts.length === 1) return { addressLocality: parts[0] }
-  const last = parts[parts.length - 1]
-  const secondLast = parts[parts.length - 2]
-  const isStateCode = /^[A-Z]{2}$/.test(secondLast)
-  if (parts.length === 3 && isStateCode) {
-    return {
-      addressLocality: parts[0],
-      addressRegion: secondLast,
-      addressCountry: /^(USA|United States)$/i.test(last) ? 'US' : last
-    }
-  }
-  if (parts.length === 2) {
-    if (isStateCode) return { addressLocality: parts[0], addressRegion: secondLast }
-    if (/^(USA|United States)$/i.test(last)) return { addressLocality: parts[0], addressCountry: 'US' }
-    return { addressLocality: parts[0], addressCountry: last }
-  }
-  return { addressLocality: parts[0], addressRegion: parts.slice(1, -1).join(', '), addressCountry: last }
-}
-
-export async function generateStaticParams() {
-  return getAllTourSlugs().map((slug) => ({ slug }))
-}
-
-const statusDescriptions: Record<string, string> = {
-  confirmed: 'Yes — confirmed dates are listed below with venues and ticket links.',
-  rescheduled: 'Dates have been rescheduled — see the updated schedule below.',
-  cancelled: 'The tour has been cancelled — details and what we know below.',
-  rumored: 'Nothing officially confirmed yet — here is what is real and what is rumor.'
-}
-
-export async function generateMetadata({
-  params
-}: {
-  params: { slug: string }
-}): Promise<Metadata> {
-  try {
-    const { frontmatter } = getTourBySlug(params.slug)
-    const primaryKeyword = frontmatter.primaryKeyword || `${frontmatter.artist} Tour 2027`
-    const dateCount = (frontmatter.dates || []).length
-    const title = pageTitle(params.slug, frontmatter.artist, frontmatter.status, dateCount)
-    const description =
-      frontmatter.metaDescription ||
-      `Is ${frontmatter.artist} touring in 2027? ${statusDescriptions[frontmatter.status] || ''} Track the ${displayTourName(frontmatter.status, frontmatter.tourName)} — honest status updates, last verified ${frontmatter.lastUpdated}.`
-    const url = `${BASE_URL}/tours/${params.slug}`
-
-    return {
-      title: { absolute: title },
-      description,
-      alternates: { canonical: url },
-      openGraph: {
-        title,
-        description,
-        url,
-        siteName: '2027.tours',
-        type: 'article',
-        modifiedTime: frontmatter.lastUpdated
-      },
-      twitter: {
-        card: 'summary_large_image',
-        title,
-        description
-      }
-    }
-  } catch {
-    return {}
-  }
-}
-
-const statusColors: Record<string, string> = {
-  confirmed: 'bg-green-100 text-green-800',
-  rescheduled: 'bg-yellow-100 text-yellow-800',
-  cancelled: 'bg-red-100 text-red-800',
-  rumored: 'bg-gray-100 text-gray-700'
-}
-
-const statusIcons: Record<string, typeof CheckCircle2> = {
-  confirmed: CheckCircle2,
-  rescheduled: RefreshCw,
-  cancelled: XCircle,
-  rumored: SearchX
-}
-
-const statusDotColors: Record<string, string> = {
+const statusDot: Record<string, string> = {
   confirmed: 'bg-green-500',
   rescheduled: 'bg-amber-400',
   cancelled: 'bg-red-500',
   rumored: 'bg-gray-300'
 }
 
-const statusToEventStatus: Record<string, string> = {
-  confirmed: 'https://schema.org/EventScheduled',
-  rescheduled: 'https://schema.org/EventRescheduled',
-  cancelled: 'https://schema.org/EventCancelled',
-  rumored: 'https://schema.org/EventScheduled'
+function LatestUpdates({ tours }: { tours: TourFrontmatter[] }) {
+  if (tours.length === 0) return null
+  return (
+    <section className="mb-16">
+      <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-2 flex items-center gap-1.5">
+        <Clock size={14} /> Freshly verified
+      </p>
+      <h2 className="font-display text-2xl sm:text-3xl font-bold mb-2">Latest tour updates</h2>
+      <p className="text-muted mb-6 max-w-2xl">
+        Every page is re-checked against official sources. Here are the most recently verified
+        2027 tour trackers.
+      </p>
+      <ul className="divide-y divide-black/10 border-y border-black/10">
+        {tours.map((t) => (
+          <li key={t.slug}>
+            <NextLink
+              href={`/tours/${t.slug}`}
+              className="group flex items-center gap-4 py-3.5 hover:bg-black/[0.02] -mx-2 px-2 rounded-lg transition-colors"
+            >
+              <span
+                className={`w-2.5 h-2.5 rounded-full shrink-0 ${statusDot[t.status] || 'bg-gray-300'}`}
+                aria-hidden
+              />
+              <span className="flex-1 min-w-0">
+                <span className="font-semibold group-hover:text-accent transition-colors">
+                  {t.artist}
+                </span>
+                <span className="text-sm text-muted"> — {t.tourName}</span>
+              </span>
+              <span className="hidden sm:block text-xs text-muted capitalize shrink-0">
+                {t.status}
+              </span>
+              <span className="text-xs text-muted shrink-0">Updated {t.lastUpdated}</span>
+              <ArrowRight
+                size={16}
+                className="text-muted group-hover:text-accent group-hover:translate-x-0.5 transition-all shrink-0"
+              />
+            </NextLink>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
 }
 
-function daysUntil(dateStr: string): number {
-  const target = new Date(dateStr + 'T00:00:00Z').getTime()
-  return Math.ceil((target - Date.now()) / (1000 * 60 * 60 * 24))
+
+
+function GenreCards({ tours }: { tours: TourFrontmatter[] }) {
+  const genres = Array.from(
+    new Set(tours.map((t) => t.genre).filter(Boolean) as string[])
+  ).sort()
+  if (genres.length === 0) return null
+
+  return (
+    <section className="mb-16">
+      <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-2">
+        By genre
+      </p>
+      <h2 className="font-display text-2xl sm:text-3xl font-bold mb-2">
+        2027 tours and concerts by genre
+      </h2>
+      <p className="text-muted mb-6 max-w-2xl">
+        Jump to the sound you care about — from confirmed stadium runs to artists who
+        haven't announced 2027 plans yet.
+      </p>
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {genres.map((genre) => {
+          const genreTours = tours.filter((t) => t.genre === genre)
+          const confirmed = genreTours.filter((t) => t.status === 'confirmed').length
+          const sample = genreTours.slice(0, 3).map((t) => t.artist).join(', ')
+          return (
+            <a
+              key={genre}
+              href="#tours"
+              className="group relative overflow-hidden rounded-2xl border border-black/10 bg-white p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+            >
+              <div
+                aria-hidden
+                className={`absolute -top-8 -right-8 w-28 h-28 rounded-full bg-gradient-to-br ${genreGradient(genre)} opacity-20 blur-xl group-hover:opacity-35 transition-opacity`}
+              />
+              <div className="relative">
+                <div
+                  className={`w-10 h-10 rounded-xl bg-gradient-to-br ${genreGradient(genre)} flex items-center justify-center mb-3`}
+                >
+                  <Music2 size={18} className="text-white" />
+                </div>
+                <h3 className="font-display text-lg font-bold group-hover:text-accent transition-colors">
+                  {genre}
+                </h3>
+                <p className="text-sm text-muted mt-1">
+                  {genreTours.length} artist{genreTours.length !== 1 ? 's' : ''} tracked
+                  {confirmed > 0 && (
+                    <span className="text-green-700 font-medium"> · {confirmed} confirmed</span>
+                  )}
+                </p>
+                <p className="text-xs text-muted mt-2 truncate">{sample}</p>
+                <span className="inline-flex items-center gap-1 text-xs font-semibold text-accent mt-3">
+                  Browse {genre.toLowerCase()} tours
+                  <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </span>
+              </div>
+            </a>
+          )
+        })}
+      </div>
+    </section>
+  )
 }
 
-export default function TourPage({ params }: { params: { slug: string } }) {
-  let tour
-  try {
-    tour = getTourBySlug(params.slug)
-  } catch {
-    notFound()
-  }
 
-  const { frontmatter, content } = tour!
-  const primaryKeyword = frontmatter.primaryKeyword || `${frontmatter.artist} Tour 2027`
-  const pageUrl = `${BASE_URL}/tours/${params.slug}`
-  const allTours = getAllTours()
-  const StatusIcon = statusIcons[frontmatter.status] || SearchX
-  const tourName = displayTourName(frontmatter.status, frontmatter.tourName)
-  const h1 = pageH1(params.slug, frontmatter.artist)
+function Eyebrow({ children }: { children: React.ReactNode }) {
+  return <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-2">{children}</p>
+}
 
-  const upcomingDates = (frontmatter.dates || [])
-    .filter((d) => daysUntil(d.date) >= 0)
-    .sort((a, b) => a.date.localeCompare(b.date))
-  const nextShow = upcomingDates[0]
-  const dateCount = (frontmatter.dates || []).length
-  const sortedAllDates = [...(frontmatter.dates || [])].sort((a, b) => a.date.localeCompare(b.date))
-  const dateRange =
-    dateCount === 0
-      ? 'To be announced'
-      : dateCount === 1
-        ? sortedAllDates[0].date
-        : `${sortedAllDates[0].date} – ${sortedAllDates[dateCount - 1].date}`
-  const trendingTours = allTours
-    .filter((t) => t.slug !== params.slug && t.status === 'confirmed')
-    .sort((a, b) => (b.dates?.length || 0) - (a.dates?.length || 0))
-    .slice(0, 5)
-  const sameGenreTours = allTours
-    .filter((t) => t.slug !== params.slug && t.genre && t.genre === frontmatter.genre)
-  const moreTours =
-    sameGenreTours.length >= 3
-      ? sameGenreTours.slice(0, 5)
-      : [...allTours]
-          .filter((t) => t.slug !== params.slug)
-          .sort((a, b) => b.lastUpdated.localeCompare(a.lastUpdated))
-          .slice(0, 5)
+export default function HomePage() {
+  const tours = getAllTours()
+  const confirmedTours = tours.filter((t) => t.status === 'confirmed')
+  const confirmedCount = confirmedTours.length
+  const totalDates = tours.reduce((sum, t) => sum + (t.dates?.length || 0), 0)
 
-  // Curated related strip: same genre first (up to 8), then recently updated.
-  const relatedStrip = (() => {
-    const rest = [...allTours]
-      .filter((t) => t.slug !== params.slug && !sameGenreTours.some((g) => g.slug === t.slug))
-      .sort((a, b) => b.lastUpdated.localeCompare(a.lastUpdated))
-    return [...sameGenreTours, ...rest].slice(0, 8)
-  })()
-  const relatedHeading =
-    sameGenreTours.length >= 5 && frontmatter.genre
-      ? `More ${frontmatter.genre} tours in 2027`
-      : 'Related 2027 tours'
-
-  // Single @graph block instead of one <script> per entity.
-  const graphNodes: Record<string, unknown>[] = [
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'All Tours', item: BASE_URL },
-        { '@type': 'ListItem', position: 2, name: primaryKeyword, item: pageUrl }
-      ]
-    },
-    {
-      '@type': 'WebPage',
-      name: primaryKeyword,
-      url: pageUrl,
-      dateModified: frontmatter.lastUpdated,
-      isPartOf: {
-        '@type': 'WebSite',
-        name: '2027.tours',
-        url: BASE_URL
-      },
-      about: {
-        '@type': 'MusicGroup',
-        name: frontmatter.artist
-      }
-    }
+  // Trending: top confirmed tours by date count + big-name rumored acts
+  const bigRumoredSlugs = ['drake-2027-tour', 'coldplay-2027-tour', 'justin-bieber-2027-tour', 'morgan-wallen-2027-tour']
+  const trending: TourFrontmatter[] = [
+    ...[...confirmedTours].sort((a, b) => (b.dates?.length || 0) - (a.dates?.length || 0)).slice(0, 6),
+    ...bigRumoredSlugs
+      .map((slug) => tours.find((t) => t.slug === slug))
+      .filter((t): t is TourFrontmatter => Boolean(t))
   ]
-  if (frontmatter.dates?.length > 0) {
-    for (const d of frontmatter.dates) {
-      graphNodes.push({
-        '@type': 'MusicEvent',
-        name: `${frontmatter.artist}: ${tourName}`,
-        startDate: d.date,
-        eventStatus: statusToEventStatus[frontmatter.status] || 'https://schema.org/EventScheduled',
-        eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-        image: [`${BASE_URL}/tours/${params.slug}/opengraph-image`],
-        location: {
-          '@type': 'Place',
-          name: d.venue,
-          address: {
-            '@type': 'PostalAddress',
-            ...splitAddress(d.city)
-          }
-        },
-        performer: {
-          '@type': 'MusicGroup',
-          name: frontmatter.artist
-        },
-        ...(d.ticketLink && {
-          offers: {
-            '@type': 'Offer',
-            url: d.ticketLink,
-            availability: 'https://schema.org/InStock'
-          }
-        })
-      })
-    }
-  }
-  if (frontmatter.faqs && frontmatter.faqs.length > 0) {
-    graphNodes.push({
-      '@type': 'FAQPage',
-      mainEntity: frontmatter.faqs.map((f) => ({
-        '@type': 'Question',
-        name: f.q,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: f.a
-        }
-      }))
-    })
-  }
-  const graphLd = {
+    .filter((t, i, arr) => arr.indexOf(t) === i)
+    .slice(0, 8)
+
+  const latestUpdates = [...tours]
+    .sort((a, b) => b.lastUpdated.localeCompare(a.lastUpdated) || a.artist.localeCompare(b.artist))
+    .slice(0, 5)
+
+  const azTours = [...tours].sort((a, b) => a.artist.localeCompare(b.artist))
+  const marqueeArtists = [...tours].sort((a, b) => a.artist.localeCompare(b.artist))
+
+  const websiteLd = {
     '@context': 'https://schema.org',
-    '@graph': graphNodes
+    '@type': 'WebSite',
+    name: '2027.tours',
+    url: 'https://2027.tours',
+    description: 'Independent tracker for 2027 concert tour announcements, dates, venues, and ticket updates.'
+  }
+
+  const itemListLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: tours.map((t, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      url: `https://2027.tours/tours/${t.slug}`,
+      name: `${t.artist} Tour 2027`
+    }))
+  }
+
+  const faqLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: homepageFaqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a }
+    }))
   }
 
   return (
-    <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-10 lg:items-start">
-    <article>
-      <JsonLd data={graphLd} />
+    <div>
+      <JsonLd data={websiteLd} />
+      {tours.length > 0 && <JsonLd data={itemListLd} />}
+      <JsonLd data={faqLd} />
 
-      <Link
-        href="/"
-        className="inline-flex items-center gap-1.5 text-sm text-muted hover:text-accent transition-colors mb-6"
-      >
-        <ArrowLeft size={15} />
-        All Tours
-      </Link>
-
-      <div className="relative rounded-2xl border border-black/10 bg-white overflow-hidden mb-8 animate-fade-in-up">
-        <figure
-          className={`relative h-36 sm:h-44 bg-gradient-to-br ${genreGradient(frontmatter.genre)}`}
-          role="img"
-          aria-label={`${primaryKeyword}: ${tourName}`}
-        >
-          <span
-            aria-hidden="true"
-            className="absolute inset-0 flex items-center justify-center font-display text-6xl sm:text-7xl font-bold text-white/90 select-none"
-          >
-            {frontmatter.artist.charAt(0)}
-          </span>
-          <span className="absolute top-4 right-4 inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full font-semibold capitalize bg-white/95 text-ink shadow-sm">
-            <span className={`w-2 h-2 rounded-full ${statusDotColors[frontmatter.status] || 'bg-gray-300'}`} aria-hidden="true" />
-            {frontmatter.status}
-          </span>
-        </figure>
-        <div className="p-6 sm:p-8">
-          <p className="text-xs font-semibold tracking-widest uppercase text-muted mb-2">{frontmatter.artist}</p>
-          <h1 className="font-display text-3xl sm:text-4xl font-bold mb-3">{h1}</h1>
-          <div className="flex items-center gap-1.5 text-sm text-muted">
-            <Clock size={14} />
-            <span>{tourName} — Updated <time dateTime={frontmatter.lastUpdated}>{frontmatter.lastUpdated}</time></span>
-          </div>
-          <p className="text-xs text-muted mt-2">
-            Researched by the <Link href="/about" className="text-accent hover:underline font-medium">2027.tours editorial team</Link> · verified against official sources
+      {/* Hero */}
+      <section className="relative overflow-hidden rounded-3xl bg-ink text-paper px-6 py-12 sm:px-12 sm:py-16 mb-10 animate-fade-in-up">
+        <div
+          aria-hidden
+          className="absolute -top-32 -right-24 w-96 h-96 rounded-full bg-accent/25 blur-3xl pointer-events-none"
+        />
+        <div
+          aria-hidden
+          className="absolute -bottom-40 -left-24 w-96 h-96 rounded-full bg-accent/10 blur-3xl pointer-events-none"
+        />
+        <div className="relative max-w-2xl">
+          <p className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-paper/70 border border-white/15 rounded-full px-3.5 py-1.5 mb-5">
+            <BadgeCheck size={14} className="text-accent" />
+            Independent 2027 tour tracker
           </p>
+          <h1 className="font-display text-4xl sm:text-6xl font-bold tracking-tight leading-[1.05]">
+            Every 2027 tour.<br />
+            One <span className="text-accent">honest</span> tracker.
+          </h1>
+          <p className="text-paper/70 mt-5 max-w-xl text-lg leading-relaxed">
+            Real dates when they're confirmed. A clear "nothing announced yet" when they're
+            not. No fabricated schedules, ever.
+          </p>
+          <div className="flex flex-wrap gap-3 mt-8">
+            <a
+              href="#tours"
+              className="inline-flex items-center gap-2 bg-accent text-white font-semibold text-sm px-6 py-3 rounded-full hover:bg-accent/90 transition-colors"
+            >
+              <LayoutGrid size={16} />
+              Browse all {tours.length} tours
+            </a>
+            <a
+              href="#approach"
+              className="inline-flex items-center gap-2 border border-white/20 text-paper font-semibold text-sm px-6 py-3 rounded-full hover:bg-white/10 transition-colors"
+            >
+              How we verify
+              <ArrowRight size={16} />
+            </a>
+          </div>
+          <div className="flex items-center gap-6 sm:gap-8 mt-10 flex-wrap">
+            <div>
+              <p className="font-display text-3xl font-bold">{tours.length}</p>
+              <p className="text-xs text-paper/60 mt-0.5">artists tracked</p>
+            </div>
+            <div className="w-px h-10 bg-white/15" aria-hidden />
+            <div>
+              <p className="font-display text-3xl font-bold text-green-400">{confirmedCount}</p>
+              <p className="text-xs text-paper/60 mt-0.5">with confirmed dates</p>
+            </div>
+            <div className="w-px h-10 bg-white/15" aria-hidden />
+            <div>
+              <p className="font-display text-3xl font-bold">{totalDates}</p>
+              <p className="text-xs text-paper/60 mt-0.5">tour dates listed</p>
+            </div>
+          </div>
         </div>
-      </div>
 
-      {/* Key facts — quick GEO/AIEO answer block */}
-      <section aria-label="Key facts" className="mb-8 rounded-2xl border border-black/10 bg-black/[0.02] p-5 sm:p-6">
-        <h2 className="text-xs font-semibold tracking-widest uppercase text-muted mb-4">Key facts</h2>
-        <dl className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          <div>
-            <dt className="text-xs text-muted mb-1">Status</dt>
-            <dd className="font-semibold text-sm capitalize">{frontmatter.status}</dd>
+        {/* Artist marquee */}
+        <div className="relative mt-10 -mx-6 sm:-mx-12 overflow-hidden" aria-hidden>
+          <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-ink to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-ink to-transparent z-10 pointer-events-none" />
+          <div className="flex whitespace-nowrap animate-marquee w-max">
+            {[0, 1].map((copy) => (
+              <div key={copy} className="flex shrink-0">
+                {marqueeArtists.map((t) => (
+                  <span key={`${copy}-${t.slug}`} className="mx-5 text-sm font-display italic text-paper/40">
+                    {t.artist}
+                    <span className="not-italic text-accent/60 ml-10">•</span>
+                  </span>
+                ))}
+              </div>
+            ))}
           </div>
-          <div>
-            <dt className="text-xs text-muted mb-1">Dates announced</dt>
-            <dd className="font-semibold text-sm">{dateCount > 0 ? `${dateCount} shows` : 'None yet'}</dd>
-          </div>
-          <div>
-            <dt className="text-xs text-muted mb-1">Tour window</dt>
-            <dd className="font-semibold text-sm">{dateRange}</dd>
-          </div>
-          <div>
-            <dt className="text-xs text-muted mb-1">Last verified</dt>
-            <dd className="font-semibold text-sm"><time dateTime={frontmatter.lastUpdated}>{frontmatter.lastUpdated}</time></dd>
-          </div>
-        </dl>
+        </div>
       </section>
 
-      {frontmatter.dates?.length > 0 ? (
-        <div className="mb-10 border border-black/10 rounded-xl overflow-hidden shadow-sm">
-          <div className="flex items-center gap-2 bg-black/[0.03] px-4 py-3 border-b border-black/10">
-            <Calendar size={16} className="text-accent" />
-            <span className="text-sm font-semibold">Tour dates</span>
-            <span className="text-xs text-muted ml-auto">{frontmatter.dates.length} show{frontmatter.dates.length !== 1 ? 's' : ''}</span>
-          </div>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm">
-              <thead className="bg-black/[0.02] text-left">
-                <tr>
-                  <th className="px-4 py-2.5 font-medium text-muted">Date</th>
-                  <th className="px-4 py-2.5 font-medium text-muted">City</th>
-                  <th className="px-4 py-2.5 font-medium text-muted">Venue</th>
-                  <th className="px-4 py-2.5 font-medium text-muted">Tickets</th>
-                </tr>
-              </thead>
-              <tbody>
-                {frontmatter.dates.map((d, i) => {
-                  const days = daysUntil(d.date)
-                  const soon = days >= 0 && days <= 30
-                  return (
-                    <tr key={i} className="border-t border-black/10 hover:bg-accent/[0.03] transition-colors">
-                      <td className="px-4 py-3 whitespace-nowrap">
-                        <time dateTime={d.date}>{d.date}</time>
-                        {soon && (
-                          <span className="ml-2 text-xs px-1.5 py-0.5 rounded-full bg-accent/10 text-accent font-medium">
-                            {days === 0 ? 'Today' : `${days}d`}
-                          </span>
-                        )}
-                      </td>
-                      <td className="px-4 py-3">{d.city}</td>
-                      <td className="px-4 py-3">{d.venue}</td>
-                      <td className="px-4 py-3">
-                        {d.ticketLink ? (
-                          <a
-                            href={d.ticketLink}
-                            className="inline-flex items-center gap-1 text-accent hover:underline font-medium"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <Ticket size={14} />
-                            Tickets
-                          </a>
-                        ) : (
-                          '—'
-                        )}
-                      </td>
-                    </tr>
-                  )
-                })}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      ) : (
-        <div className="mb-10 flex items-start gap-3 border border-black/10 rounded-xl p-5 bg-black/[0.02]">
-          <SearchX size={20} className="text-muted shrink-0 mt-0.5" />
-          <div>
-            <p className="font-semibold text-sm">No dates announced yet</p>
-            <p className="text-sm text-muted mt-0.5">
-              We'll add real dates here the moment they're officially confirmed — no placeholders, no guesses.
-            </p>
-          </div>
-        </div>
-      )}
+      {/* Trending */}
+      <TrendingStrip tours={trending} />
 
-      <div className="prose prose-neutral max-w-none prose-headings:font-display prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:border-b prose-h2:border-black/10 prose-h2:pb-2 prose-h3:text-lg prose-h3:mt-6 prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-strong:text-ink prose-table:text-sm prose-blockquote:border-accent prose-blockquote:not-italic prose-blockquote:font-normal prose-blockquote:text-muted">
-        <MDXRemote source={content} components={{ Callout }} />
-      </div>
+      {/* Search + filter + grid */}
+      <section id="tours" className="mb-16 scroll-mt-24">
+        <Eyebrow>Tour finder</Eyebrow>
+        <h2 className="font-display text-2xl sm:text-3xl font-bold mb-2">Browse all 2027 tours</h2>
+        <p className="text-muted mb-6 max-w-2xl">
+          Search any artist, filter by confirmation status or genre. Green badge means real,
+          officially announced dates — everything else tells you exactly what is rumor and
+          what isn't.
+        </p>
+        <TourExplorer tours={tours} />
+      </section>
 
-      {frontmatter.sources && frontmatter.sources.length > 0 && (
-        <div className="mt-10 pt-8 border-t border-black/10">
-          <h2 className="font-display text-2xl font-bold mb-4">Sources</h2>
-          <ul className="space-y-2">
-            {frontmatter.sources.map((s) => (
-              <li key={s.url} className="text-sm">
-                <a
-                  href={s.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-accent hover:underline font-medium"
-                >
-                  {s.label}
-                </a>
-                <span className="text-muted"> — official source</span>
-              </li>
-            ))}
-          </ul>
-          <p className="text-xs text-muted mt-3">
-            Tour dates and announcements on this page are verified against the sources above.
-            Last checked <time dateTime={frontmatter.lastUpdated}>{frontmatter.lastUpdated}</time>.
+      {/* Latest updates */}
+      <LatestUpdates tours={latestUpdates} />
+
+      {/* Genres */}
+      <GenreCards tours={tours} />
+
+      {/* Tour spotlight - in-text links to top pages */}
+      <section className="mb-16 py-10 border-t border-black/10">
+        <Eyebrow>Spotlight</Eyebrow>
+        <h2 className="font-display text-2xl sm:text-3xl font-bold mb-4">2027 tours worth watching right now</h2>
+        <div className="max-w-3xl space-y-4 text-muted leading-relaxed">
+          <p>
+            A few 2027 tours are already shaping up to be the year's biggest stories. K-pop fans
+            should watch the{' '}
+            <NextLink href="/tours/bts-2027-tour" className="text-accent hover:underline font-medium">
+              BTS Tour 2027
+            </NextLink>
+            , the closing leg of the record-breaking ARIRANG World Tour, while pop's biggest
+            arena draw is covered on our{' '}
+            <NextLink href="/tours/olivia-rodrigo-2027-tour" className="text-accent hover:underline font-medium">
+              Olivia Rodrigo 2027 tour dates
+            </NextLink>{' '}
+            page — 46 confirmed shows and counting.
+          </p>
+          <p>
+            Country dominates the confirmed list: the{' '}
+            <NextLink href="/tours/luke-combs-2027-tour" className="text-accent hover:underline font-medium">
+              Luke Combs 2027 tour
+            </NextLink>{' '}
+            and{' '}
+            <NextLink href="/tours/teddy-swims-2027-tour" className="text-accent hover:underline font-medium">
+              Teddy Swims 2027 tour dates
+            </NextLink>{' '}
+            both have real schedules posted. On the heavier side,{' '}
+            <NextLink href="/tours/megadeth-2027-tour" className="text-accent hover:underline font-medium">
+              Megadeth's 2027 European tour
+            </NextLink>
+            , the{' '}
+            <NextLink href="/tours/foo-fighters-2027-tour" className="text-accent hover:underline font-medium">
+              Foo Fighters 2027 tour
+            </NextLink>
+            , and{' '}
+            <NextLink href="/tours/system-of-a-down-2027-tour" className="text-accent hover:underline font-medium">
+              System of a Down 2027 tour
+            </NextLink>{' '}
+            are the metal and rock dates to track. Every page is re-verified against official
+            sources — check the "Updated" date at the top of each tour page.
           </p>
         </div>
-      )}
+      </section>
 
-      {frontmatter.faqs && frontmatter.faqs.length > 0 && (
-        <div className="mt-10 pt-8 border-t border-black/10">
-          <div className="flex items-center gap-2 mb-5">
-            <HelpCircle size={20} className="text-accent" />
-            <h2 className="font-display text-2xl font-bold">Frequently asked questions</h2>
-          </div>
-          <FAQAccordion faqs={frontmatter.faqs} />
-        </div>
-      )}
-
-      <div className="mt-10 pt-8 border-t border-black/10">
-        <p className="text-sm text-muted mb-5">
-          Looking for other artists? Browse the{' '}
-          <Link href="/" className="text-accent hover:underline font-medium">
-            {homepageAnchorText(params.slug)}
-          </Link>{' '}
-          for every confirmed and rumored show we're tracking.
+      {/* Why this site */}
+      <section id="approach" className="mb-16 py-12 px-6 sm:px-10 bg-black/[0.02] rounded-3xl scroll-mt-24">
+        <Eyebrow>Our approach</Eyebrow>
+        <h2 className="font-display text-2xl sm:text-3xl font-bold mb-3">Why trust this over other tour sites</h2>
+        <p className="text-muted mb-8 max-w-2xl">
+          Most tour sites either copy unverified schedules or stay vague. We do the
+          unglamorous work: checking primary sources and telling you what we actually know.
         </p>
-        <h2 className="font-display text-2xl font-bold mb-5">{relatedHeading}</h2>
-        <RelatedTours tours={relatedStrip} />
-      </div>
-    </article>
-
-    <aside className="mt-10 lg:mt-0 space-y-6 lg:sticky lg:top-24">
-      {/* At a glance */}
-      <div className="rounded-2xl border border-black/10 bg-white p-5">
-        <h3 className="text-xs font-semibold tracking-widest uppercase text-muted mb-4">At a glance</h3>
-        <span className={`inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full font-medium capitalize mb-4 ${statusColors[frontmatter.status] || ''}`}>
-          <StatusIcon size={14} />
-          {frontmatter.status}
-        </span>
-        <dl className="space-y-2.5 text-sm">
-          <div className="flex justify-between gap-2">
-            <dt className="text-muted">Dates listed</dt>
-            <dd className="font-semibold">{frontmatter.dates?.length ? `${frontmatter.dates.length}` : 'None yet'}</dd>
-          </div>
-          {nextShow && (
-            <div className="flex justify-between gap-2">
-              <dt className="text-muted">Next show</dt>
-              <dd className="font-semibold text-right">
-                {nextShow.city}
-                <span className="block text-muted font-normal text-xs"><time dateTime={nextShow.date}>{nextShow.date}</time></span>
-              </dd>
+        <div className="grid gap-8 sm:grid-cols-3">
+          <div>
+            <div className="w-11 h-11 rounded-2xl bg-green-100 flex items-center justify-center mb-4">
+              <ShieldCheck size={20} className="text-green-700" />
             </div>
-          )}
-          <div className="flex justify-between gap-2">
-            <dt className="text-muted">Last verified</dt>
-            <dd className="font-semibold"><time dateTime={frontmatter.lastUpdated}>{frontmatter.lastUpdated}</time></dd>
+            <p className="font-semibold mb-1.5">Confirmed vs. rumor, always separated</p>
+            <p className="text-sm text-muted leading-relaxed">We never present a fan tweet as an official announcement. Every page tells you exactly how certain each piece of information is.</p>
           </div>
-        </dl>
-      </div>
-
-      {/* Trending */}
-      {trendingTours.length > 0 && (
-        <div className="rounded-2xl border border-black/10 bg-white p-5">
-          <h3 className="text-xs font-semibold tracking-widest uppercase text-muted mb-2 flex items-center gap-1.5">
-            <TrendingUp size={13} className="text-accent" /> Trending tours
-          </h3>
-          <ul className="divide-y divide-black/5">
-            {trendingTours.map((t) => (
-              <li key={t.slug}>
-                <Link href={`/tours/${t.slug}`} className="group flex items-center gap-2.5 py-2.5">
-                  <span className={`w-2 h-2 rounded-full shrink-0 ${statusDotColors[t.status] || 'bg-gray-300'}`} aria-hidden />
-                  <span className="text-sm font-medium group-hover:text-accent transition-colors truncate">{t.artist}</span>
-                  <span className="text-xs text-muted ml-auto shrink-0">{t.dates?.length || 0} dates</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <div>
+            <div className="w-11 h-11 rounded-2xl bg-amber-100 flex items-center justify-center mb-4">
+              <SearchX size={20} className="text-amber-700" />
+            </div>
+            <p className="font-semibold mb-1.5">Misinformation gets called out</p>
+            <p className="text-sm text-muted leading-relaxed">When a fake "leaked" schedule is circulating for an artist, we name it and explain why it isn't real — not just stay silent on it.</p>
+          </div>
+          <div>
+            <div className="w-11 h-11 rounded-2xl bg-blue-100 flex items-center justify-center mb-4">
+              <Link2 size={20} className="text-blue-700" />
+            </div>
+            <p className="font-semibold mb-1.5">Official sources, every time</p>
+            <p className="text-sm text-muted leading-relaxed">Every page links directly to the artist's official site or verified press coverage — never resale sites or unverified aggregators.</p>
+          </div>
         </div>
-      )}
+      </section>
 
-      {/* More like this */}
-      {moreTours.length > 0 && (
-        <div className="rounded-2xl border border-black/10 bg-white p-5">
-          <h3 className="text-xs font-semibold tracking-widest uppercase text-muted mb-2">
-            {sameGenreTours.length >= 3 && frontmatter.genre ? `More ${frontmatter.genre} tours` : 'Recently updated'}
-          </h3>
-          <ul className="divide-y divide-black/5">
-            {moreTours.map((t) => (
-              <li key={t.slug}>
-                <Link href={`/tours/${t.slug}`} className="group flex items-center gap-2.5 py-2.5">
-                  <span className={`w-2 h-2 rounded-full shrink-0 ${statusDotColors[t.status] || 'bg-gray-300'}`} aria-hidden />
-                  <span className="text-sm font-medium group-hover:text-accent transition-colors truncate">{t.artist}</span>
-                  <span className="text-xs text-muted ml-auto shrink-0 capitalize">{t.status}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <Link href="/" className="inline-flex items-center gap-1 text-xs font-semibold text-accent hover:underline mt-3">
-            View all {allTours.length} tours <ArrowLeft size={12} className="rotate-180" />
-          </Link>
+      {/* A–Z directory */}
+      <section className="mb-16 py-10 border-t border-black/10">
+        <Eyebrow>Directory</Eyebrow>
+        <h2 className="font-display text-2xl sm:text-3xl font-bold mb-4">All 2027 tours A–Z</h2>
+        <ul className="grid gap-x-8 gap-y-2 sm:grid-cols-2 lg:grid-cols-3">
+          {azTours.map((t) => (
+            <li key={t.slug} className="flex items-baseline gap-2 text-sm border-b border-black/5 pb-2">
+              <NextLink href={`/tours/${t.slug}`} className="font-medium hover:text-accent transition-colors">
+                {t.artist.endsWith('Tour') ? t.artist + ' 2027' : t.artist + ' Tour 2027'}
+              </NextLink>
+              <span className="text-xs text-muted capitalize ml-auto shrink-0">{t.status}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* FAQ */}
+      <section className="mb-16 py-10 border-t border-black/10">
+        <Eyebrow>Questions</Eyebrow>
+        <div className="flex items-center gap-2 mb-6">
+          <HelpCircle size={22} className="text-accent" />
+          <h2 className="font-display text-2xl sm:text-3xl font-bold">2027 tour and concert FAQs</h2>
         </div>
-      )}
-    </aside>
+        <FAQAccordion />
+      </section>
+
     </div>
   )
 }
