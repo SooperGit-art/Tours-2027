@@ -36,6 +36,8 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/david-guetta-2027-tour — David Guetta Tour 2027: confirmed, 4 dates
 - /tours/depeche-mode-2027-tour — Depeche Mode Tour 2027: rumored, no dates confirmed
 - /tours/die-arzte-2027-tour — Die Ärzte Tour 2027: confirmed, 32 dates
+- /tours/die-prinzen-2027-tour — Die Prinzen Tour 2027: confirmed, 24 dates
+
 - /tours/die-toten-hosen-2027-tour — Die Toten Hosen Tour 2027: confirmed, 8 dates
 - /tours/djo-2027-tour — Djo Tour 2027: rumored, no dates confirmed
 - /tours/don-omar-2027-tour — Don Omar Tour 2027: confirmed, 17 dates
@@ -108,6 +110,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/sabrina-carpenter-2027-tour — Sabrina Carpenter Tour 2027: rumored, no dates confirmed
 - /tours/sam-fender-2027-tour — Sam Fender Tour 2027: rumored, no dates confirmed
 - /tours/simple-minds-2027-tour — Simple Minds Tour 2027: confirmed, 37 dates
+- /tours/simple-plan-2027-tour — Simple Plan Tour 2027: confirmed, 15 dates
 - /tours/sleep-token-2027-tour — Sleep Token Tour 2027: rumored, no dates confirmed
 - /tours/slipknot-2027-tour — Slipknot Tour 2027: confirmed, 5 dates
 - /tours/slash-2027-tour — Slash Tour 2027: confirmed, 45 dates
