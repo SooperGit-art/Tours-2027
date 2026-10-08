@@ -8,6 +8,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 
 ## Pages
 
+- /tours/30-seconds-to-mars-2027-tour — 30 Seconds to Mars Tour 2027: confirmed, 17 dates
 - /tours/a-perfect-circle-2027-tour — A Perfect Circle Tour 2027: confirmed, 32 dates
 
 - /tours/adele-2027-tour — Adele Tour 2027: rumored, no dates confirmed
@@ -109,6 +110,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/rolling-stones-2027-tour — Rolling Stones Tour 2027: rumored, no dates confirmed
 - /tours/sabrina-carpenter-2027-tour — Sabrina Carpenter Tour 2027: rumored, no dates confirmed
 - /tours/sam-fender-2027-tour — Sam Fender Tour 2027: rumored, no dates confirmed
+- /tours/seether-2027-tour — Seether Tour 2027: confirmed, 27 dates
 - /tours/simple-minds-2027-tour — Simple Minds Tour 2027: confirmed, 37 dates
 - /tours/simple-plan-2027-tour — Simple Plan Tour 2027: confirmed, 15 dates
 - /tours/sleep-token-2027-tour — Sleep Token Tour 2027: rumored, no dates confirmed
