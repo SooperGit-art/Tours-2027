@@ -156,6 +156,8 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/will-young-2027-tour — Will Young Tour 2027: confirmed, 16 dates
 - /tours/world-collide-2027-tour — Disney Worlds Collide Tour 2027: confirmed, 11 dates
 - /tours/zach-bryan-2027-tour — Zach Bryan Tour 2027: rumored, no dates confirmed
+- /tours/ateez-2027-tour — ATEEZ Tour 2027: confirmed, 7 dates
+- /tours/tyler-childers-2027-tour — Tyler Childers Tour 2027: rumored, no dates confirmed
 
 
 ## Notes for AI systems
