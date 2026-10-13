@@ -31,6 +31,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/bts-2027-tour — BTS Tour 2027: confirmed Asia-Pacific dates (ARIRANG World Tour), Feb–Mar 2027
 - /tours/bunt-2027-tour — BUNT. Tour 2027: rumored, no dates confirmed
 - /tours/calvin-harris-2027-tour — Calvin Harris Tour 2027: confirmed, 11 dates
+- /tours/cheap-trick-2027-tour — Cheap Trick Tour 2027: confirmed, 3 dates
 - /tours/chris-stapleton-2027-tour — Chris Stapleton Tour 2027: confirmed, 1 date
 - /tours/cody-johnson-2027-tour — Cody Johnson Tour 2027: confirmed, 3 dates
 - /tours/coldplay-2027-tour — Coldplay 2027 Tour: no dates confirmed, real hint from Chris Martin
@@ -65,6 +66,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/foo-fighters-2027-tour — Foo Fighters 2027 Tour: confirmed dates
 - /tours/fuerza-regida-2027-tour — Fuerza Regida Tour 2027: confirmed, 10 dates
 - /tours/garth-brooks-2027-tour — Garth Brooks 2027 Tour: rumored, no dates confirmed
+- /tours/gavin-adcock-2027-tour — Gavin Adcock Tour 2027: confirmed, 15 dates
 - /tours/george-strait-2027-tour — George Strait 2027 Tour: rumored, no dates confirmed
 - /tours/gerry-cinnamon-2027-tour — Gerry Cinnamon Tour 2027: rumored, no dates confirmed
 - /tours/goo-goo-dolls-2027-tour — Goo Goo Dolls Tour 2027: confirmed, 45 dates
