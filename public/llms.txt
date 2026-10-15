@@ -69,6 +69,8 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/fuerza-regida-2027-tour — Fuerza Regida Tour 2027: confirmed, 10 dates
 - /tours/garth-brooks-2027-tour — Garth Brooks 2027 Tour: rumored, no dates confirmed
 - /tours/gavin-adcock-2027-tour — Gavin Adcock Tour 2027: confirmed, 15 dates
+- /tours/geolier-2027-tour — Geolier Tour 2027: confirmed, 6 dates
+
 - /tours/george-strait-2027-tour — George Strait 2027 Tour: rumored, no dates confirmed
 - /tours/gerry-cinnamon-2027-tour — Gerry Cinnamon Tour 2027: rumored, no dates confirmed
 - /tours/goo-goo-dolls-2027-tour — Goo Goo Dolls Tour 2027: confirmed, 45 dates
@@ -78,8 +80,12 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/harry-styles-2027-tour — Harry Styles Tour 2027: confirmed, 41 dates
 - /tours/herbert-gronemeyer-2027-tour — Herbert Grönemeyer Tour 2027: confirmed, 20 dates
 - /tours/hozier-2027-tour — Hozier Tour 2027: rumored, no dates confirmed
+- /tours/iu-2027-tour — IU Tour 2027: rumored, no dates confirmed
+
 - /tours/james-blunt-2027-tour — James Blunt Tour 2027: confirmed, 21 dates
 - /tours/jay-wheeler-2027-tour — Jay Wheeler Tour 2027: confirmed, 27 dates
+- /tours/jennifer-rostock-2027-tour — Jennifer Rostock Tour 2027: rumored, no dates confirmed
+
 - /tours/john-mayer-2027-tour — John Mayer Tour 2027: confirmed, 6 dates
 - /tours/judas-priest-2027-tour — Judas Priest Tour 2027: confirmed 2027 festival appearances (Tons of Rock Oslo, Tuska Helsinki)
 - /tours/justin-bieber-2027-tour — Justin Bieber 2027 Tour: no tour confirmed, debunks viral fake tour dates
@@ -138,6 +144,8 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/sam-fender-2027-tour — Sam Fender Tour 2027: rumored, no dates confirmed
 - /tours/seether-2027-tour — Seether Tour 2027: confirmed, 27 dates
 - /tours/sido-2027-tour — Sido Tour 2027: confirmed, 15 dates
+- /tours/sienna-spiro-2027-tour — Sienna Spiro Tour 2027: confirmed, 23 dates
+
 - /tours/simple-minds-2027-tour — Simple Minds Tour 2027: confirmed, 37 dates
 - /tours/simple-plan-2027-tour — Simple Plan Tour 2027: confirmed, 15 dates
 - /tours/simply-red-2027-tour — Simply Red Tour 2027: confirmed, 34 dates
@@ -157,6 +165,8 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/the-struts-2027-tour — The Struts Tour 2027: confirmed, 45 dates
 - /tours/the-weeknd-2027-tour — The Weeknd Tour 2027: rumored, no dates confirmed
 - /tours/tokio-hotel-2027-tour — Tokio Hotel Tour 2027: confirmed, 13 dates (Summer Encore 2027)
+- /tours/tommy-blaize-2027-tour — Tommy Blaize Tour 2027: confirmed, 4 dates
+
 - /tours/toto-2027-tour — Toto Tour 2027: confirmed, 3 dates
 - /tours/treaty-oak-revival-2027-tour — Treaty Oak Revival Tour 2027: confirmed, 12 dates
 - /tours/txt-2027-tour — TXT Tour 2027: confirmed, 25 dates
