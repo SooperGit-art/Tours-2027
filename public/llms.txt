@@ -181,6 +181,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/tears-for-fears-2027-tour — Tears for Fears Tour 2027: confirmed, 3 dates
 - /tours/teddy-swims-2027-tour — Teddy Swims 2027 Tour: confirmed dates
 - /tours/the-1975-2027-tour — The 1975 Tour 2027: rumored, no dates confirmed
+- /tours/the-cure-2027-tour — The Cure Tour 2027: rumored, no dates confirmed
 - /tours/the-lumineers-2027-tour — The Lumineers Tour 2027: rumored, no dates confirmed
 - /tours/the-struts-2027-tour — The Struts Tour 2027: confirmed, 45 dates
 - /tours/the-weeknd-2027-tour — The Weeknd Tour 2027: rumored, no dates confirmed
@@ -189,6 +190,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/tommy-blaize-2027-tour — Tommy Blaize Tour 2027: confirmed, 4 dates
 - /tours/toto-2027-tour — Toto Tour 2027: confirmed, 3 dates
 - /tours/treaty-oak-revival-2027-tour — Treaty Oak Revival Tour 2027: confirmed, 12 dates
+- /tours/twenty-one-pilots-2027-tour — Twenty One Pilots Tour 2027: rumored, no dates confirmed
 - /tours/txt-2027-tour — TXT Tour 2027: confirmed, 25 dates
 - /tours/tyler-childers-2027-tour — Tyler Childers Tour 2027: rumored, no dates confirmed
 - /tours/u2-2027-tour — U2 Tour 2027: rumored, no dates confirmed
