@@ -12,6 +12,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 
 
 
+
 - /tours/30-seconds-to-mars-2027-tour — 30 Seconds to Mars Tour 2027: confirmed, 17 dates
 - /tours/a-perfect-circle-2027-tour — A Perfect Circle Tour 2027: confirmed, 32 dates
 - /tours/adele-2027-tour — Adele Tour 2027: rumored, no dates confirmed
@@ -213,4 +214,3 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/world-collide-2027-tour — Disney Worlds Collide Tour 2027: confirmed, 11 dates
 - /tours/yuridia-2027-tour — Yuridia Tour 2027: confirmed, 19 dates
 - /tours/zach-bryan-2027-tour — Zach Bryan Tour 2027: rumored, no dates confirmed
-
