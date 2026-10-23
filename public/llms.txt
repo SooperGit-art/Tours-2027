@@ -27,6 +27,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/backstreet-boys-2027-tour — Backstreet Boys Tour 2027: confirmed, 6 dates
 - /tours/bad-bunny-2027-tour — Bad Bunny Tour 2027: rumored, no dates confirmed
 - /tours/bad-omens-2027-tour — Bad Omens 2027 Tour: rumored, no dates confirmed
+- /tours/ben-folds-five-2027-tour — Ben Folds Five Tour 2027: confirmed, 9 dates
 - /tours/benson-boone-2027-tour — Benson Boone Tour 2027: rumored, no dates confirmed
 - /tours/billie-eilish-2027-tour — Billie Eilish Tour 2027: rumored, no dates confirmed
 - /tours/blue-oyster-cult-2027-tour — Blue Öyster Cult Tour 2027: confirmed, 2 dates
@@ -35,6 +36,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/brandon-lake-2027-tour — Brandon Lake Tour 2027: rumored, no dates confirmed
 - /tours/breaking-benjamin-2027-tour — Breaking Benjamin Tour 2027: confirmed, 1 date
 - /tours/bring-me-the-horizon-2027-tour — Bring Me The Horizon Tour 2027: confirmed, 13 dates
+- /tours/brooks-and-dunn-2027-tour — Brooks & Dunn Tour 2027: confirmed, 6 dates
 - /tours/bruce-springsteen-2027-tour — Bruce Springsteen Tour 2027: rumored, no dates confirmed
 - /tours/bruno-mars-2027-tour — Bruno Mars Tour 2027: confirmed, 40 dates
 - /tours/bryan-adams-2027-tour — Bryan Adams Tour 2027: confirmed, 10 dates
@@ -179,6 +181,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/slipknot-2027-tour — Slipknot Tour 2027: confirmed, 5 dates
 - /tours/staind-2027-tour — Staind Tour 2027: confirmed, 27 dates
 - /tours/stevie-wonder-2027-tour — Stevie Wonder Tour 2027: rumored, no dates confirmed
+- /tours/stick-figure-2027-tour — Stick Figure Tour 2027: confirmed, 18 dates
 - /tours/stray-kids-2027-tour — Stray Kids Tour 2027: confirmed, 4 dates
 - /tours/system-of-a-down-2027-tour — System of a Down 2027 Tour: confirmed dates
 - /tours/take-that-2027-tour — Take That Tour 2027: confirmed, 19 dates
@@ -194,6 +197,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/the-struts-2027-tour — The Struts Tour 2027: confirmed, 45 dates
 - /tours/the-weeknd-2027-tour — The Weeknd Tour 2027: rumored, no dates confirmed
 - /tours/three-days-grace-2027-tour — Three Days Grace Tour 2027: rumored, no dates confirmed
+- /tours/tinashe-2027-tour — Tinashe Tour 2027: confirmed, 18 dates
 - /tours/tokio-hotel-2027-tour — Tokio Hotel Tour 2027: confirmed, 13 dates (Summer Encore 2027)
 - /tours/tommy-blaize-2027-tour — Tommy Blaize Tour 2027: confirmed, 4 dates
 - /tours/toto-2027-tour — Toto Tour 2027: confirmed, 3 dates
