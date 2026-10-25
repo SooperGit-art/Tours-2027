@@ -115,6 +115,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/korn-2027-tour — Korn Tour 2027: rumored, no dates confirmed
 - /tours/kraftklub-2027-tour — Kraftklub Tour 2027: confirmed, 4 dates
 - /tours/lainey-wilson-2027-tour — Lainey Wilson Tour 2027: confirmed, 4 dates
+- /tours/lana-del-rey-2027-tour — Lana Del Rey Tour 2027: rumored, no dates confirmed
 - /tours/leon-bridges-2027-tour — Leon Bridges Tour 2027: confirmed, 37 dates
 - /tours/lighthouse-family-2027-tour — Lighthouse Family Tour 2027: confirmed, 16 dates
 - /tours/limp-bizkit-2027-tour — Limp Bizkit Tour 2027: confirmed, 12 dates
@@ -147,6 +148,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/olivia-dean-2027-tour — Olivia Dean Tour 2027: confirmed, 1 date (festival set)
 - /tours/olivia-rodrigo-2027-tour — Olivia Rodrigo 2027 Tour: confirmed, 46 dates
 - /tours/one-direction-2027-tour — One Direction Tour 2027: rumored, no dates confirmed
+- /tours/papa-roach-2027-tour — Papa Roach Tour 2027: confirmed, 30 dates
 - /tours/partynextdoor-2027-tour — PartyNextDoor Tour 2027: rumored, no dates confirmed
 - /tours/paul-heaton-2027-tour — Paul Heaton Tour 2027: confirmed, 5 dates
 - /tours/pearl-jam-2027-tour — Pearl Jam Tour 2027: rumored, no dates confirmed
@@ -158,6 +160,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/provinz-2027-tour — Provinz Tour 2027: rumored, no dates confirmed
 - /tours/radiohead-2027-tour — Radiohead Tour 2027: confirmed, 21 dates
 - /tours/rammstein-2027-tour — Rammstein 2027 Tour: rumored, no dates confirmed
+- /tours/raye-2027-tour — RAYE Tour 2027: rumored, no dates confirmed
 - /tours/red-clay-strays-2027-tour — The Red Clay Strays Tour 2027: confirmed, 36 dates
 - /tours/rihanna-2027-tour — Rihanna Tour 2027: rumored, no dates confirmed
 - /tours/riley-green-2027-tour — Riley Green Tour 2027: confirmed, 29 dates
@@ -220,4 +223,5 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/will-young-2027-tour — Will Young Tour 2027: confirmed, 16 dates
 - /tours/world-collide-2027-tour — Disney Worlds Collide Tour 2027: confirmed, 11 dates
 - /tours/yuridia-2027-tour — Yuridia Tour 2027: confirmed, 19 dates
+- /tours/zac-brown-band-2027-tour — Zac Brown Band Tour 2027: rumored, no dates confirmed
 - /tours/zach-bryan-2027-tour — Zach Bryan Tour 2027: rumored, no dates confirmed
