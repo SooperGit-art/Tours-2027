@@ -33,6 +33,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/blue-oyster-cult-2027-tour — Blue Öyster Cult Tour 2027: confirmed, 2 dates
 - /tours/bohse-onkelz-2027-tour — Böhse Onkelz 2027 Tour: rumored, no dates confirmed
 - /tours/bon-jovi-2027-tour — Bon Jovi Tour 2027: rumored, no dates confirmed
+- /tours/boris-brejcha-2027-tour — Boris Brejcha Tour 2027: confirmed, 8 dates
 - /tours/brandon-lake-2027-tour — Brandon Lake Tour 2027: rumored, no dates confirmed
 - /tours/breaking-benjamin-2027-tour — Breaking Benjamin Tour 2027: confirmed, 1 date
 - /tours/bring-me-the-horizon-2027-tour — Bring Me The Horizon Tour 2027: confirmed, 13 dates
@@ -43,8 +44,10 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/bts-2027-tour — BTS Tour 2027: confirmed Asia-Pacific dates (ARIRANG World Tour), Feb–Mar 2027
 - /tours/bunt-2027-tour — BUNT. Tour 2027: rumored, no dates confirmed
 - /tours/calvin-harris-2027-tour — Calvin Harris Tour 2027: confirmed, 11 dates
+- /tours/celine-dion-2027-tour — Celine Dion Tour 2027: confirmed, 10 dates
 - /tours/cheap-trick-2027-tour — Cheap Trick Tour 2027: confirmed, 3 dates
 - /tours/chris-stapleton-2027-tour — Chris Stapleton Tour 2027: confirmed, 1 date
+- /tours/chvrches-2027-tour — CHVRCHES Tour 2027: confirmed, 27 dates
 - /tours/cody-johnson-2027-tour — Cody Johnson Tour 2027: confirmed, 3 dates
 - /tours/coldplay-2027-tour — Coldplay 2027 Tour: no dates confirmed, real hint from Chris Martin
 - /tours/conan-gray-2027-tour — Conan Gray Tour 2027: rumored, no dates confirmed
@@ -115,6 +118,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/korn-2027-tour — Korn Tour 2027: rumored, no dates confirmed
 - /tours/kraftklub-2027-tour — Kraftklub Tour 2027: confirmed, 4 dates
 - /tours/lainey-wilson-2027-tour — Lainey Wilson Tour 2027: confirmed, 4 dates
+- /tours/lake-street-dive-2027-tour — Lake Street Dive Tour 2027: confirmed, 15 dates
 - /tours/lana-del-rey-2027-tour — Lana Del Rey Tour 2027: rumored, no dates confirmed
 - /tours/leon-bridges-2027-tour — Leon Bridges Tour 2027: confirmed, 37 dates
 - /tours/lighthouse-family-2027-tour — Lighthouse Family Tour 2027: confirmed, 16 dates
@@ -158,6 +162,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/post-malone-2027-tour — Post Malone Tour 2027: rumored, no dates confirmed
 - /tours/powderfinger-2027-tour — Powderfinger Tour 2027: confirmed, 18 dates
 - /tours/provinz-2027-tour — Provinz Tour 2027: rumored, no dates confirmed
+- /tours/queens-of-the-stone-age-2027-tour — Queens of the Stone Age Tour 2027: confirmed, 17 dates
 - /tours/radiohead-2027-tour — Radiohead Tour 2027: confirmed, 21 dates
 - /tours/rammstein-2027-tour — Rammstein 2027 Tour: rumored, no dates confirmed
 - /tours/raye-2027-tour — RAYE Tour 2027: rumored, no dates confirmed
@@ -206,6 +211,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/tinashe-2027-tour — Tinashe Tour 2027: confirmed, 18 dates
 - /tours/tokio-hotel-2027-tour — Tokio Hotel Tour 2027: confirmed, 13 dates (Summer Encore 2027)
 - /tours/tommy-blaize-2027-tour — Tommy Blaize Tour 2027: confirmed, 4 dates
+- /tours/tool-2027-tour — Tool Tour 2027: rumored, no dates confirmed
 - /tours/toto-2027-tour — Toto Tour 2027: confirmed, 3 dates
 - /tours/treaty-oak-revival-2027-tour — Treaty Oak Revival Tour 2027: confirmed, 12 dates
 - /tours/twenty-one-pilots-2027-tour — Twenty One Pilots Tour 2027: rumored, no dates confirmed
