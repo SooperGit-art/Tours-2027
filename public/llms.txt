@@ -38,6 +38,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/breaking-benjamin-2027-tour — Breaking Benjamin Tour 2027: confirmed, 1 date
 - /tours/bring-me-the-horizon-2027-tour — Bring Me The Horizon Tour 2027: confirmed, 13 dates
 - /tours/brooks-and-dunn-2027-tour — Brooks & Dunn Tour 2027: confirmed, 6 dates
+- /tours/bruce-dickinson-2027-tour — Bruce Dickinson Tour 2027: confirmed, 28 dates
 - /tours/bruce-springsteen-2027-tour — Bruce Springsteen Tour 2027: rumored, no dates confirmed
 - /tours/bruno-mars-2027-tour — Bruno Mars Tour 2027: confirmed, 40 dates
 - /tours/bryan-adams-2027-tour — Bryan Adams Tour 2027: confirmed, 10 dates
@@ -91,7 +92,9 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/george-strait-2027-tour — George Strait 2027 Tour: rumored, no dates confirmed
 - /tours/gerry-cinnamon-2027-tour — Gerry Cinnamon Tour 2027: rumored, no dates confirmed
 - /tours/goo-goo-dolls-2027-tour — Goo Goo Dolls Tour 2027: confirmed, 45 dates
+- /tours/goose-2027-tour — Goose Tour 2027: confirmed, 7 dates
 - /tours/gracie-abrams-2027-tour — Gracie Abrams Tour 2027: confirmed, 54 dates
+- /tours/greensky-bluegrass-2027-tour — Greensky Bluegrass Tour 2027: confirmed, 24 dates
 - /tours/greta-van-fleet-2027-tour — Greta Van Fleet Tour 2027: confirmed, 56 dates
 - /tours/guns-n-roses-2027-tour — Guns N' Roses Tour 2027: rumored, no dates confirmed
 - /tours/hans-zimmer-2027-tour — Hans Zimmer Tour 2027: confirmed, 30 dates
@@ -135,6 +138,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/megan-thee-stallion-2027-tour — Megan Thee Stallion Tour 2027: rumored, no dates confirmed
 - /tours/mercyme-2027-tour — MercyMe Tour 2027: confirmed, 19 dates
 
+- /tours/meshuggah-2027-tour — Meshuggah Tour 2027: rumored, no dates confirmed
 - /tours/metallica-2027-tour — Metallica Tour 2027: confirmed, 12 dates
 - /tours/michael-patrick-kelly-2027-tour — Michael Patrick Kelly Tour 2027: confirmed, 6 dates
 - /tours/milet-2027-tour — milet Tour 2027: confirmed, 2 dates
@@ -165,6 +169,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/queens-of-the-stone-age-2027-tour — Queens of the Stone Age Tour 2027: confirmed, 17 dates
 - /tours/radiohead-2027-tour — Radiohead Tour 2027: confirmed, 21 dates
 - /tours/rammstein-2027-tour — Rammstein 2027 Tour: rumored, no dates confirmed
+- /tours/rauw-alejandro-2027-tour — Rauw Alejandro Tour 2027: rumored, no dates confirmed
 - /tours/raye-2027-tour — RAYE Tour 2027: rumored, no dates confirmed
 - /tours/red-clay-strays-2027-tour — The Red Clay Strays Tour 2027: confirmed, 36 dates
 - /tours/rihanna-2027-tour — Rihanna Tour 2027: rumored, no dates confirmed
@@ -180,6 +185,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/sabrina-carpenter-2027-tour — Sabrina Carpenter Tour 2027: rumored, no dates confirmed
 - /tours/sam-barber-2027-tour — Sam Barber Tour 2027: confirmed, 7 dates
 - /tours/sam-fender-2027-tour — Sam Fender Tour 2027: rumored, no dates confirmed
+- /tours/saxon-2027-tour — Saxon Tour 2027: confirmed, 28 dates
 - /tours/seether-2027-tour — Seether Tour 2027: confirmed, 27 dates
 - /tours/shania-twain-2027-tour — Shania Twain Tour 2027: rumored, no dates confirmed
 - /tours/sido-2027-tour — Sido Tour 2027: confirmed, 15 dates
@@ -196,6 +202,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/stray-kids-2027-tour — Stray Kids Tour 2027: confirmed, 4 dates
 - /tours/system-of-a-down-2027-tour — System of a Down 2027 Tour: confirmed dates
 - /tours/take-that-2027-tour — Take That Tour 2027: confirmed, 19 dates
+- /tours/tally-hall-2027-tour — Tally Hall Tour 2027: confirmed, 6 dates
 - /tours/tame-impala-2027-tour — Tame Impala Tour 2027: confirmed, 14 dates
 - /tours/tate-mcrae-2027-tour — Tate McRae Tour 2027: rumored, no dates confirmed
 - /tours/taylor-swift-2027-tour — Taylor Swift Tour 2027: rumored, no dates confirmed
@@ -204,10 +211,12 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/teddy-swims-2027-tour — Teddy Swims 2027 Tour: confirmed dates
 - /tours/the-1975-2027-tour — The 1975 Tour 2027: rumored, no dates confirmed
 - /tours/the-cure-2027-tour — The Cure Tour 2027: rumored, no dates confirmed
+- /tours/the-doobie-brothers-2027-tour — The Doobie Brothers Tour 2027: confirmed, 9 dates
 - /tours/the-lumineers-2027-tour — The Lumineers Tour 2027: rumored, no dates confirmed
 - /tours/the-struts-2027-tour — The Struts Tour 2027: confirmed, 45 dates
 - /tours/the-weeknd-2027-tour — The Weeknd Tour 2027: rumored, no dates confirmed
 - /tours/three-days-grace-2027-tour — Three Days Grace Tour 2027: rumored, no dates confirmed
+- /tours/till-lindemann-2027-tour — Till Lindemann Tour 2027: confirmed, 33 dates
 - /tours/tinashe-2027-tour — Tinashe Tour 2027: confirmed, 18 dates
 - /tours/tokio-hotel-2027-tour — Tokio Hotel Tour 2027: confirmed, 13 dates (Summer Encore 2027)
 - /tours/tommy-blaize-2027-tour — Tommy Blaize Tour 2027: confirmed, 4 dates
