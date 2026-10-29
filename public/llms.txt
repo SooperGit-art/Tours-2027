@@ -55,6 +55,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/creed-2027-tour — Creed Tour 2027: confirmed, 1 date
 - /tours/damien-rice-2027-tour — Damien Rice Tour 2027: confirmed, 31 dates
 - /tours/daughtry-2027-tour — Daughtry Tour 2027: confirmed, 26 dates
+- /tours/david-garrett-2027-tour — David Garrett Tour 2027: rumored, no dates confirmed
 - /tours/david-gilmour-2027-tour — David Gilmour Tour 2027: rumored, no dates confirmed
 - /tours/david-guetta-2027-tour — David Guetta Tour 2027: confirmed, 4 dates
 - /tours/def-leppard-2027-tour — Def Leppard Tour 2027: confirmed, 45 dates
@@ -213,6 +214,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/the-cure-2027-tour — The Cure Tour 2027: rumored, no dates confirmed
 - /tours/the-doobie-brothers-2027-tour — The Doobie Brothers Tour 2027: confirmed, 9 dates
 - /tours/the-lumineers-2027-tour — The Lumineers Tour 2027: rumored, no dates confirmed
+- /tours/the-neighborhood-2027-tour — The Neighborhood Tour 2027: confirmed, 29 dates
 - /tours/the-struts-2027-tour — The Struts Tour 2027: confirmed, 45 dates
 - /tours/the-weeknd-2027-tour — The Weeknd Tour 2027: rumored, no dates confirmed
 - /tours/three-days-grace-2027-tour — Three Days Grace Tour 2027: rumored, no dates confirmed
