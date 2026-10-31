@@ -46,6 +46,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/bts-2027-tour — BTS Tour 2027: confirmed Asia-Pacific dates (ARIRANG World Tour), Feb–Mar 2027
 - /tours/bunt-2027-tour — BUNT. Tour 2027: rumored, no dates confirmed
 - /tours/calvin-harris-2027-tour — Calvin Harris Tour 2027: confirmed, 11 dates
+- /tours/carlos-santana-2027-tour — Carlos Santana Tour 2027: confirmed, 13 dates
 - /tours/celine-dion-2027-tour — Celine Dion Tour 2027: confirmed, 10 dates
 - /tours/cheap-trick-2027-tour — Cheap Trick Tour 2027: confirmed, 3 dates
 - /tours/chris-stapleton-2027-tour — Chris Stapleton Tour 2027: confirmed, 1 date
@@ -88,6 +89,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/foo-fighters-2027-tour — Foo Fighters 2027 Tour: confirmed dates
 - /tours/forrest-frank-2027-tour — Forrest Frank Tour 2027: rumored, no dates confirmed
 - /tours/fuerza-regida-2027-tour — Fuerza Regida Tour 2027: confirmed, 10 dates
+- /tours/fury-in-the-slaughterhouse-2027-tour — Fury in the Slaughterhouse Tour 2027: rumored, no dates confirmed
 - /tours/garth-brooks-2027-tour — Garth Brooks 2027 Tour: rumored, no dates confirmed
 - /tours/gavin-adcock-2027-tour — Gavin Adcock Tour 2027: confirmed, 15 dates
 - /tours/geolier-2027-tour — Geolier Tour 2027: confirmed, 6 dates
@@ -187,9 +189,11 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/sabrina-carpenter-2027-tour — Sabrina Carpenter Tour 2027: rumored, no dates confirmed
 - /tours/sam-barber-2027-tour — Sam Barber Tour 2027: confirmed, 7 dates
 - /tours/sam-fender-2027-tour — Sam Fender Tour 2027: rumored, no dates confirmed
+- /tours/satinder-sartaaj-2027-tour — Satinder Sartaaj Tour 2027: confirmed, 4 dates
 - /tours/saxon-2027-tour — Saxon Tour 2027: confirmed, 28 dates
 - /tours/seether-2027-tour — Seether Tour 2027: confirmed, 27 dates
 - /tours/shania-twain-2027-tour — Shania Twain Tour 2027: rumored, no dates confirmed
+- /tours/shinedown-2027-tour — Shinedown Tour 2027: confirmed, 3 dates
 - /tours/sido-2027-tour — Sido Tour 2027: confirmed, 15 dates
 - /tours/sienna-spiro-2027-tour — Sienna Spiro Tour 2027: confirmed, 23 dates
 - /tours/simple-minds-2027-tour — Simple Minds Tour 2027: confirmed, 37 dates
@@ -211,6 +215,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 
 - /tours/tears-for-fears-2027-tour — Tears for Fears Tour 2027: confirmed, 3 dates
 - /tours/teddy-swims-2027-tour — Teddy Swims 2027 Tour: confirmed dates
+- /tours/texas-2027-tour — Texas Tour 2027: confirmed, 18 dates
 - /tours/the-1975-2027-tour — The 1975 Tour 2027: rumored, no dates confirmed
 - /tours/the-cure-2027-tour — The Cure Tour 2027: rumored, no dates confirmed
 - /tours/the-doobie-brothers-2027-tour — The Doobie Brothers Tour 2027: confirmed, 9 dates
