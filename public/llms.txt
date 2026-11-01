@@ -205,6 +205,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/staind-2027-tour — Staind Tour 2027: confirmed, 27 dates
 - /tours/stevie-wonder-2027-tour — Stevie Wonder Tour 2027: rumored, no dates confirmed
 - /tours/stick-figure-2027-tour — Stick Figure Tour 2027: confirmed, 18 dates
+- /tours/sting-2027-tour — Sting Tour 2027: confirmed, 37 dates
 - /tours/stray-kids-2027-tour — Stray Kids Tour 2027: confirmed, 4 dates
 - /tours/system-of-a-down-2027-tour — System of a Down 2027 Tour: confirmed dates
 - /tours/take-that-2027-tour — Take That Tour 2027: confirmed, 19 dates
