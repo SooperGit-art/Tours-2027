@@ -153,6 +153,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/kings-of-leon-2027-tour — Kings of Leon Tour 2027: confirmed, 2 dates
 - /tours/kontra-k-2027-tour — Kontra K Tour 2027: confirmed, 12 dates
 - /tours/korn-2027-tour — Korn Tour 2027: rumored, no dates confirmed
+- /tours/kpop-demon-hunters-2027-tour — KPop Demon Hunters Tour 2027: confirmed, 18 dates
 - /tours/kraftklub-2027-tour — Kraftklub Tour 2027: confirmed, 4 dates
 - /tours/la-voix-2027-tour — La Voix Tour 2027: confirmed, 35 dates
 - /tours/lady-gaga-2027-tour — Lady Gaga Tour 2027: rumored, no dates confirmed
@@ -199,6 +200,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/olivia-rodrigo-2027-tour — Olivia Rodrigo 2027 Tour: confirmed, 46 dates
 - /tours/one-direction-2027-tour — One Direction Tour 2027: rumored, no dates confirmed
 - /tours/ozuna-2027-tour — Ozuna Tour 2027: rumored, no dates confirmed
+- /tours/paloma-faith-2027-tour — Paloma Faith Tour 2027: confirmed, 18 dates
 - /tours/papa-roach-2027-tour — Papa Roach Tour 2027: confirmed, 30 dates
 - /tours/partynextdoor-2027-tour — PartyNextDoor Tour 2027: rumored, no dates confirmed
 - /tours/paul-heaton-2027-tour — Paul Heaton Tour 2027: confirmed, 5 dates
@@ -214,6 +216,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/queens-of-the-stone-age-2027-tour — Queens of the Stone Age Tour 2027: confirmed, 17 dates
 - /tours/radiohead-2027-tour — Radiohead Tour 2027: confirmed, 21 dates
 - /tours/rammstein-2027-tour — Rammstein 2027 Tour: rumored, no dates confirmed
+- /tours/rankin-family-2027-tour — The Rankin Family Tour 2027: confirmed, 23 dates
 - /tours/rauw-alejandro-2027-tour — Rauw Alejandro Tour 2027: rumored, no dates confirmed
 - /tours/raye-2027-tour — RAYE Tour 2027: rumored, no dates confirmed
 - /tours/red-clay-strays-2027-tour — The Red Clay Strays Tour 2027: confirmed, 36 dates
