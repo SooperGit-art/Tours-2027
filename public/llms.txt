@@ -252,6 +252,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/simple-plan-2027-tour — Simple Plan Tour 2027: confirmed, 15 dates
 - /tours/simply-red-2027-tour — Simply Red Tour 2027: confirmed, 34 dates
 - /tours/slash-2027-tour — Slash Tour 2027: confirmed, 45 dates
+- /tours/slayer-2027-tour — Slayer Tour 2027: rumored, no dates confirmed
 - /tours/sleep-token-2027-tour — Sleep Token Tour 2027: rumored, no dates confirmed
 - /tours/slipknot-2027-tour — Slipknot Tour 2027: confirmed, 5 dates
 - /tours/staind-2027-tour — Staind Tour 2027: confirmed, 27 dates
@@ -286,6 +287,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/travis-tritt-2027-tour — Travis Tritt Tour 2027: confirmed, 14 dates
 - /tours/treaty-oak-revival-2027-tour — Treaty Oak Revival Tour 2027: confirmed, 12 dates
 - /tours/twenty-one-pilots-2027-tour — Twenty One Pilots Tour 2027: rumored, no dates confirmed
+- /tours/two-door-cinema-club-2027-tour — Two Door Cinema Club Tour 2027: confirmed, 14 dates
 - /tours/txt-2027-tour — TXT Tour 2027: confirmed, 25 dates
 - /tours/tyler-childers-2027-tour — Tyler Childers Tour 2027: rumored, no dates confirmed
 - /tours/u2-2027-tour — U2 Tour 2027: rumored, no dates confirmed
