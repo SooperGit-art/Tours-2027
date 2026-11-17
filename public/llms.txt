@@ -71,6 +71,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/daddy-yankee-2027-tour — Daddy Yankee Tour 2027: rumored, no dates confirmed
 - /tours/damien-rice-2027-tour — Damien Rice Tour 2027: confirmed, 31 dates
 - /tours/danny-go-2027-tour — Danny Go Tour 2027: rumored, no dates confirmed
+- /tours/darius-rucker-2027-tour — Darius Rucker Tour 2027: confirmed, 7 dates
 - /tours/dashboard-confessional-2027-tour — Dashboard Confessional Tour 2027: confirmed, 15 dates
 - /tours/daughtry-2027-tour — Daughtry Tour 2027: confirmed, 26 dates
 - /tours/dave-matthews-band-2027-tour — Dave Matthews Band Tour 2027: confirmed, 4 dates
@@ -124,6 +125,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/greenbeats-2027-tour — greenbeats Tour 2027: confirmed, 8 dates
 - /tours/greensky-bluegrass-2027-tour — Greensky Bluegrass Tour 2027: confirmed, 24 dates
 - /tours/greta-van-fleet-2027-tour — Greta Van Fleet Tour 2027: confirmed, 56 dates
+- /tours/grupo-frontera-2027-tour — Grupo Frontera Tour 2027: rumored, no dates confirmed
 - /tours/guns-n-roses-2027-tour — Guns N' Roses Tour 2027: rumored, no dates confirmed
 - /tours/hans-zimmer-2027-tour — Hans Zimmer Tour 2027: confirmed, 30 dates
 - /tours/harry-styles-2027-tour — Harry Styles Tour 2027: confirmed, 41 dates
@@ -256,6 +258,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/sleep-token-2027-tour — Sleep Token Tour 2027: rumored, no dates confirmed
 - /tours/slipknot-2027-tour — Slipknot Tour 2027: confirmed, 5 dates
 - /tours/staind-2027-tour — Staind Tour 2027: confirmed, 27 dates
+- /tours/steps-2027-tour — Steps Tour 2027: confirmed, 12 dates
 - /tours/stevie-wonder-2027-tour — Stevie Wonder Tour 2027: rumored, no dates confirmed
 - /tours/stick-figure-2027-tour — Stick Figure Tour 2027: confirmed, 18 dates
 - /tours/sting-2027-tour — Sting Tour 2027: confirmed, 37 dates
@@ -297,6 +300,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/volbeat-2027-tour — Volbeat Tour 2027: rumored, no dates confirmed
 - /tours/warped-tour-2027 — Vans Warped Tour 2027: festival dates confirmed
 - /tours/warren-zeiders-2027-tour — Warren Zeiders Tour 2027: confirmed, 16 dates
+- /tours/westlife-2027-tour — Westlife Tour 2027: confirmed, 12 dates
 - /tours/wiggles-2027-tour — The Wiggles Tour 2027: confirmed, 5 dates
 - /tours/will-young-2027-tour — Will Young Tour 2027: confirmed, 16 dates
 - /tours/world-collide-2027-tour — Disney Worlds Collide Tour 2027: confirmed, 11 dates
