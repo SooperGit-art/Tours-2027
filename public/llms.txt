@@ -272,6 +272,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/sleep-token-2027-tour — Sleep Token Tour 2027: rumored, no dates confirmed
 - /tours/slipknot-2027-tour — Slipknot Tour 2027: confirmed, 5 dates
 - /tours/staind-2027-tour — Staind Tour 2027: confirmed, 27 dates
+- /tours/stephen-wilson-jr-2027-tour — Stephen Wilson Jr Tour 2027: confirmed, 12 dates
 - /tours/steps-2027-tour — Steps Tour 2027: confirmed, 12 dates
 - /tours/stevie-wonder-2027-tour — Stevie Wonder Tour 2027: rumored, no dates confirmed
 - /tours/stick-figure-2027-tour — Stick Figure Tour 2027: confirmed, 18 dates
@@ -290,6 +291,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/teddy-swims-2027-tour — Teddy Swims 2027 Tour: confirmed dates
 - /tours/texas-2027-tour — Texas Tour 2027: confirmed, 18 dates
 - /tours/the-1975-2027-tour — The 1975 Tour 2027: rumored, no dates confirmed
+- /tours/the-chicks-2027-tour — The Chicks Tour 2027: confirmed, 2 dates
 - /tours/the-cure-2027-tour — The Cure Tour 2027: rumored, no dates confirmed
 - /tours/the-doobie-brothers-2027-tour — The Doobie Brothers Tour 2027: confirmed, 9 dates
 - /tours/the-lumineers-2027-tour — The Lumineers Tour 2027: rumored, no dates confirmed
