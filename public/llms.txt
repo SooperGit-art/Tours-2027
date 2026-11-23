@@ -39,6 +39,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/ben-rector-2027-tour — Ben Rector Tour 2027: confirmed, 17 dates
 - /tours/benson-boone-2027-tour — Benson Boone Tour 2027: rumored, no dates confirmed
 - /tours/billie-eilish-2027-tour — Billie Eilish Tour 2027: rumored, no dates confirmed
+- /tours/billy-idol-2027-tour — Billy Idol Tour 2027: confirmed, 6 dates
 - /tours/billy-ocean-2027-tour — Billy Ocean Tour 2027: confirmed, 14 dates
 - /tours/billy-strings-2027-tour — Billy Strings Tour 2027: confirmed, 13 dates
 - /tours/blue-oyster-cult-2027-tour — Blue Öyster Cult Tour 2027: confirmed, 2 dates
@@ -242,6 +243,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/ritchie-blackmore-2027-tour — Ritchie Blackmore Tour 2027: confirmed, 6 dates
 - /tours/robbie-williams-2027-tour — Robbie Williams Tour 2027: confirmed, 4 dates
 - /tours/robert-plant-2027-tour — Robert Plant Tour 2027: confirmed, 8 dates
+- /tours/robyn-2027-tour — Robyn Tour 2027: rumored, no dates confirmed
 - /tours/rod-stewart-2027-tour — Rod Stewart Tour 2027: confirmed, 27 dates
 - /tours/roger-waters-2027-tour — Roger Waters Tour 2027: confirmed, 56 dates
 - /tours/roland-kaiser-2027-tour — Roland Kaiser Tour 2027: confirmed, 33 dates
