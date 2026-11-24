@@ -20,6 +20,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/adele-2027-tour — Adele Tour 2027: rumored, no dates confirmed
 - /tours/alex-warren-2027-tour — Alex Warren Tour 2027: confirmed, 9 dates
 - /tours/alfie-boe-2027-tour — Alfie Boe Tour 2027: confirmed, 14 dates
+- /tours/alice-cooper-2027-tour — Alice Cooper Tour 2027: confirmed, 9 dates
 - /tours/ana-gabriel-2027-tour — Ana Gabriel Tour 2027: rumored, no dates confirmed
 - /tours/andrea-berg-2027-tour — Andrea Berg Tour 2027: confirmed, 24 dates
 - /tours/andrea-bocelli-2027-tour — Andrea Bocelli Tour 2027: confirmed, 14 dates
