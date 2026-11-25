@@ -224,6 +224,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/partynextdoor-2027-tour — PartyNextDoor Tour 2027: rumored, no dates confirmed
 - /tours/paul-heaton-2027-tour — Paul Heaton Tour 2027: confirmed, 5 dates
 - /tours/pearl-jam-2027-tour — Pearl Jam Tour 2027: rumored, no dates confirmed
+- /tours/peter-hook-and-the-light-2027-tour — Peter Hook and the Light Tour 2027: confirmed, 35 dates
 - /tours/phil-wickham-2027-tour — Phil Wickham Tour 2027: rumored, no dates confirmed
 - /tours/phoebe-bridgers-2027-tour — Phoebe Bridgers Tour 2027: confirmed, 17 dates
 - /tours/pinegrove-2027-tour — Pinegrove Tour 2027: rumored, no dates confirmed
