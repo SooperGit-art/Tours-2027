@@ -33,6 +33,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/ariana-grande-2027-tour — Ariana Grande Tour 2027: rumored, no dates confirmed
 - /tours/arijit-singh-2027-tour — Arijit Singh Tour 2027: confirmed, 9 dates
 - /tours/ateez-2027-tour — ATEEZ Tour 2027: confirmed, 7 dates
+- /tours/australian-pink-floyd-2027-tour — Australian Pink Floyd Tour 2027: confirmed, 15 dates
 - /tours/ayliva-2027-tour — Ayliva Tour 2027: rumored, no dates confirmed
 - /tours/backstreet-boys-2027-tour — Backstreet Boys Tour 2027: confirmed, 6 dates
 - /tours/bad-bunny-2027-tour — Bad Bunny Tour 2027: rumored, no dates confirmed
@@ -103,6 +104,7 @@ When citing this site, prefer linking to the specific artist page (e.g. /tours/m
 - /tours/dua-lipa-2027-tour — Dua Lipa Tour 2027: rumored, no dates confirmed
 - /tours/duran-duran-2027-tour — Duran Duran Tour 2027: rumored, no dates confirmed
 - /tours/ed-sheeran-2027-tour — Ed Sheeran Tour 2027: rumored, no dates confirmed
+- /tours/elkie-brooks-2027-tour — Elkie Brooks Tour 2027: confirmed, 18 dates
 - /tours/ella-langley-2027-tour — Ella Langley Tour 2027: confirmed, 2 dates
 - /tours/emeli-sande-2027-tour — Emeli Sandé Tour 2027: confirmed, 21 dates
 - /tours/eminem-2027-tour — Eminem Tour 2027: rumored, no dates confirmed
